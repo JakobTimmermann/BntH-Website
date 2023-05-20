@@ -73,9 +73,36 @@ a {
 	transition: .3s all ease;
 }
 
+@media only screen and (min-width: 502px) and (max-width: 576px) {
+	header br {
+		display: none;
+	}
+
+	header .container {
+		margin-left: calc(20px-0.5vw);
+	}
+}
+
+@media (max-width: 501px) {
+	header .navbar-brand {
+		margin-left: 20px;
+	}
+}
+
+.navbar-toggler {
+	color: yellow;
+	border-color: rgba(255, 255, 0, 0.52);
+	margin-top: 10px;
+}
+
+.navbar-toggler-item {
+	color: yellow;
+	/* ToDo does not work! */
+}
+
 a,
 a:hover {
-	color:rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.5);
 	text-decoration: none !important;
 }
 
@@ -108,6 +135,7 @@ header .navbar-brand {
 	letter-spacing: .2em;
 	font-weight: 800;
 	font-size: 2rem;
+	padding-top: 4px;
 }
 
 header .navbar-brand.absolute {
@@ -118,11 +146,17 @@ header .navbar-brand.absolute {
 	header .navbar-brand.absolute {
 		position: relative;
 	}
+
+	.hero {
+		height: 70vh;
+	}
+
 }
 
 header .navbar-brand {
 	color: yellow;
 }
+
 header .navbar-brand span {
 	color: yellow;
 }
@@ -131,27 +165,35 @@ header .navbar-brand span {
 	header .navbar-brand span {
 		color: #ced4da;
 	}
-}
-/* header .navbar {
-	background: yellow !important;
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-} */
 
-@media (min-width: 768px) {
 	header .navbar {
 		padding-top: 0;
 		padding-bottom: 0;
 		background: none !important;
 		position: relative;
 	}
+
+	header .container {
+		max-width: 850px;
+	}
+
+	header .navbar-brand {
+		margin-left: 20px;
+	}
 }
 
+/* header .navbar {
+	background: yellow !important;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+} */
+
+
 header .navbar .nav-link {
-	padding: 1.7rem 1rem;
-	outline: none !important; 
-	font-size: 1rem;
-	color: yellow; 
+	padding: 8px;
+	outline: none !important;
+	font-size: 1.2rem;
+	color: yellow;
 }
 
 header .navbar .nav-link:hover {
@@ -166,6 +208,12 @@ header .navbar .nav-link:hover {
 
 header .navbar .nav-link.active {
 	color: #fff !important;
+}
+
+.dropdown:hover .dropdown-menu {
+	display: block;
+	margin-top: 0;
+	/* remove the gap so it doesn't close */
 }
 
 header .navbar .dropdown-menu {
@@ -197,15 +245,69 @@ header .navbar .dropdown-menu:before {
 	}
 }
 
+@media (min-width: 1000px) {
+
+	header .container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+
+		max-width: calc(950px + 3vw);
+	}
+
+	header .navbar-brand {
+		font-size: calc(2rem + 0.8vw);
+	}
+
+	header .navbar-expand-sm .navbar-nav .nav-link {
+		font-size: calc(1rem + 0.8vw);
+		padding-left: calc(8px + 0.5vw);
+		padding-right: calc(8px + 0.5vw);
+	}
+}
+
+@media (min-width: 1400px) {
+
+	header .container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+
+		max-width: 1300px;
+	}
+}
+
+@media (min-width: 1600px) {
+
+	header .container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+
+		max-width: 1420px;
+	}
+
+	.header .navbar-brand {
+		font-size: calc(2rem + 1vw);
+	}
+}
+
+
 header .navbar .dropdown-menu .dropdown-item:hover {
 	background: yellow;
 	color: black;
 }
 
-header .navbar .dropdown-menu .dropdown-item.active {
+/* header .navbar .dropdown-menu .dropdown-item.active {
 	background: #007bff;
 	color: #fff;
-}
+} */
 
 header .navbar .dropdown-menu a {
 	padding-top: 7px;
@@ -230,4 +332,8 @@ header .navbar .cta-btn a:hover {
 	color: #007bff !important;
 	-webkit-box-shadow: 2px 0 30px -5px rgba(0, 0, 0, 0.2);
 	box-shadow: 2px 0 30px -5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar>.container {
+	align-items: flex-start;
 }
