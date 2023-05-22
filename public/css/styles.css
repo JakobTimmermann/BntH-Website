@@ -63,11 +63,6 @@ a {
 	}
 }
 
-@media (max-width: 501px) {
-	header .navbar-brand {
-		margin-left: 20px;
-	}
-}
 
 .navbar-toggler {
 	color: #F7C04A;
@@ -82,7 +77,7 @@ a {
 
 a,
 a:hover {
-	color: rgba(0, 0, 0, 0.5);
+	color: #0F6292;
 	text-decoration: none !important;
 }
 
@@ -112,13 +107,15 @@ header {
 	}
 }
 
-header .navbar-brand {
+.vereinsname {
 	color: #FFED00;
 	text-transform: uppercase;
 	letter-spacing: .2em;
 	font-weight: 900;
 	font-size: 2rem;
-	padding-top: 4px;
+	padding: 30px 0;
+	margin-left: 5rem;
+	z-index: 2;
 }
 
 /* header .navbar-brand.absolute {
@@ -144,17 +141,17 @@ header .navbar-brand {
 	#mainNav.is-fixed {
 		/* when the user scrolls down, we hide the header right above the viewport */
 		position: relative;
-		top: -219px;
+		top: -83px;
 		transition: transform 0.2s;
 		background-color:black; 
 	}
 
-	#mainNav.is-fixed .navbar-brand {
+	#mainNav.is-fixed .vereinsname {
 		color: #FFED00;
 	}
 
-	#mainNav.is-fixed .navbar-brand:focus,
-	#mainNav.is-fixed .navbar-brand:hover {
+	#mainNav.is-fixed .vereinsname:focus,
+	#mainNav.is-fixed .vereinsname:hover {
 		color: #0085A1;
 	}
 
@@ -186,7 +183,7 @@ header .navbar-brand {
 		max-width: 850px;
 	}
 
-	header .navbar-brand {
+	header .vereinsname {
 		margin-left: 20px;
 	}
 }
@@ -209,7 +206,7 @@ header .navbar .nav-link:hover {
 	color: #0F6292;
 }
 
-header .navbar .navbar-brand:hover {
+header .navbar .vereinsname:hover {
 	color: #0F6292;
 }
 
@@ -270,7 +267,7 @@ header .navbar .dropdown-menu:before {
 		max-width: calc(950px + 3vw);
 	}
 
-	header .navbar-brand {
+	.vereinsname {
 		font-size: calc(2rem + 0.8vw);
 	}
 
@@ -306,7 +303,7 @@ header .navbar .dropdown-menu:before {
 		max-width: 1420px;
 	}
 
-	.header .navbar-brand {
+	.vereinsname {
 		font-size: calc(2rem + 1vw);
 	}
 }
@@ -418,6 +415,7 @@ header .navbar .cta-btn a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: -150px 0;
+	z-index: -1;
 }
 
 /* Test Section */
