@@ -16,7 +16,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm ">
+        <nav class="navbar navbar-expand-sm sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Boyz<br> n-the <br> Hood</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -30,7 +30,41 @@
                             <a class="nav-link " href="#section-Verein">Verein</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mitglieder</a>
+                            <a class="nav-link" href="#section-Mitglieder">Mitglieder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Historie</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                aria-expanded="false">Reisen</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Nizza 2017</a></li>
+                                <li><a class="dropdown-item" href="#">Dublin 2018</a></li>
+                                <li><a class="dropdown-item" href="#">Albanien 2019</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <header>
+        <nav class="navbar navbar-expand-sm sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Boyz<br> n-the <br> Hood</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample11" expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse d-lg-flex">
+                    <ul class="navbar-nav col-xxl-8 col-xl-8 col-lg-9 justify-content-lg-center">
+                        <li class="nav-item">
+                            <a class="nav-link " href="#section-Verein">Verein</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section-Mitglieder">Mitglieder</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Historie</a>
@@ -48,9 +82,9 @@
                     <!-- <div class="d-lg-flex col-lg-3 justify-content-lg-end">
                         <button class="btn btn-primary">Button</button>
                     </div> -->
-                </div>
-            </div>
-        </nav>
+    </div>
+    </div>
+    </nav>
     </header>
 
     <div class="hero"></div>
@@ -74,20 +108,32 @@
     <section id="section-Verein">
         <div class="grid-container-Verein">
             <div class="Vereinsmotto">
-                <h1>
+                <h1 data-aos="zoom-out" data-aos-delay="100" class="aos-init aos-animate logo">
                     Freunde<br> für's<br> Leben
                 </h1>
             </div>
             <div class="Vereinsinfo">
-                <p>Satzung</p>
-                <p>Historie</p>
+                <p data-aos="zoom-out" data-aos-delay="300" class="aos-init aos-animate logo">
+                    Satzung
+                </p>
+                <p data-aos="zoom-out" data-aos-delay="400" class="aos-init aos-animate logo">
+                    Historie
+                </p>
             </div>
-            <div class="logo">
+            <div class="logo-background">
             </div>
         </div>
     </section>
-    <section style="background-color: blue; z-index: 1; height: 100vh;">
+    <section id="section-Mitglieder">
+        <div class="mitglieder-background">
+
+
+        </div>
     </section>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
     </script>
