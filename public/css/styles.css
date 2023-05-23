@@ -34,9 +34,9 @@ p {
 
 h1,
 h2,
-h3,
 h4,
 h5,
+h3,
 h6,
 .h1,
 .h2,
@@ -58,11 +58,18 @@ a {
 		display: none;
 	}
 
-	header .container {
-		margin-left: calc(20px-0.5vw);
-	}
 }
 
+header .navbar-nav {
+	background-color: rgb(15, 98, 146, 0.7);
+	transition: background-color 0.2s;
+	border-radius: 0px 0px 30px 30px;
+	padding: 0px;
+}
+
+.navbar>.container {
+	margin: 0px;
+}
 
 .navbar-toggler {
 	color: #F7C04A;
@@ -101,19 +108,13 @@ header {
 }
 
 
-@media (min-width: 768px) {
-	header {
-		padding: 30px 0;
-	}
-}
-
 .vereinsname {
 	color: #FFED00;
 	text-transform: uppercase;
 	letter-spacing: .2em;
 	font-weight: 900;
 	font-size: 2rem;
-	padding: 30px 0;
+	padding: 25px 0;
 	margin-left: 5rem;
 	z-index: 2;
 }
@@ -143,31 +144,29 @@ header {
 		position: relative;
 		top: -83px;
 		transition: transform 0.2s;
-		background-color:black; 
 	}
 
-	#mainNav.is-fixed .vereinsname {
-		color: #FFED00;
-	}
-
-	#mainNav.is-fixed .vereinsname:focus,
-	#mainNav.is-fixed .vereinsname:hover {
-		color: #0085A1;
-	}
 
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a {
 		color: #FFED00;
 	}
 
+	#mainNav.is-visible .navbar-nav {
+		background-color: rgb(15, 98, 146, 0.7);
+		transition: background-color 0.2s;
+		border-radius: 0px 0px 30px 30px;
+	}
+
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a:focus,
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a:hover {
-		color: #0085A1;
+		color: #FFED00;
 	}
 
 	#mainNav.is-visible {
 		/* if the user changes the scrolling direction, we show the header */
 		transform: translate3d(0, 100%, 0);
 	}
+
 }
 
 @media (min-width: 768px) {
@@ -179,12 +178,11 @@ header {
 		position: relative;
 	}
 
-	header .container {
-		max-width: 850px;
-	}
 
-	header .vereinsname {
-		margin-left: 20px;
+	header .navbar-expand-sm .navbar-nav .nav-link {
+		font-size: calc(1rem + 0.3vw);
+		/* padding-left: calc(8px + 0.5vw);
+		padding-right: calc(8px + 0.5vw); */
 	}
 }
 
@@ -194,25 +192,33 @@ header {
 	padding-bottom: .5rem;
 } */
 
-
 header .navbar .nav-link {
-	padding: 8px;
+	padding: 20px 10px !important;
 	outline: none !important;
 	font-size: 1.2rem;
 	color: #FFED00;
+}
+
+.nav-item-left {
+	padding-left: 20px !important;
+}
+
+.nav-item-right {
+	padding-right: 20px !important;
 }
 
 header .navbar .nav-link:hover {
 	color: #0F6292;
 }
 
-header .navbar .vereinsname:hover {
+header .navbar:hover {
 	color: #0F6292;
 }
 
 @media (max-width: 1199.98px) {
 	header .navbar .nav-link {
-		padding: .5rem 0rem;
+		/* padding: .5rem 0rem; */
+		padding: 20px;
 	}
 }
 
@@ -257,51 +263,20 @@ header .navbar .dropdown-menu:before {
 
 @media (min-width: 1000px) {
 
-	header .container,
-	.container-lg,
-	.container-md,
-	.container-sm,
-	.container-xl,
-	.container-xxl {
-
-		max-width: calc(950px + 3vw);
-	}
-
 	.vereinsname {
 		font-size: calc(2rem + 0.8vw);
 	}
 
 	header .navbar-expand-sm .navbar-nav .nav-link {
 		font-size: calc(1rem + 0.8vw);
-		padding-left: calc(8px + 0.5vw);
-		padding-right: calc(8px + 0.5vw);
+		/* padding-left: calc(8px + 0.5vw);
+		padding-right: calc(8px + 0.5vw); */
 	}
 }
 
-@media (min-width: 1400px) {
-
-	header .container,
-	.container-lg,
-	.container-md,
-	.container-sm,
-	.container-xl,
-	.container-xxl {
-
-		max-width: 1300px;
-	}
-}
 
 @media (min-width: 1600px) {
 
-	header .container,
-	.container-lg,
-	.container-md,
-	.container-sm,
-	.container-xl,
-	.container-xxl {
-
-		max-width: 1420px;
-	}
 
 	.vereinsname {
 		font-size: calc(2rem + 1vw);
@@ -345,10 +320,6 @@ header .navbar .cta-btn a:hover {
 	box-shadow: 2px 0 30px -5px rgba(0, 0, 0, 0.2);
 }
 
-.navbar>.container {
-	align-items: flex-start;
-}
-
 .Vereinsmotto {
 	display: flex;
 	align-items: center;
@@ -384,6 +355,7 @@ header .navbar .cta-btn a:hover {
 	background-size: calc(180% - 20vw);
 	background-repeat: no-repeat;
 	background-position: 150px -0px;
+	opacity: 0.8;
 }
 
 .grid-container-Verein {
