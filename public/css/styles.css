@@ -378,15 +378,17 @@ header .navbar .cta-btn a:hover {
 	content: ' ';
 	display: block;
 	position: absolute;
-	left: -150px;
 	top: 0;
-	width: 130%;
 	height: 100vh;
+	width: 100%;
 	opacity: 0.6;
 	background-image: url('/images/mitglieder.jpeg');
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: -150px 0;
+	background-position: -160px 0px;
+	background-size: 130%;
+	/* background-position: -150px 0;
+	left: -150px;
+	width: 130%; */
 	z-index: -1;
 }
 
