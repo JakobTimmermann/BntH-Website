@@ -152,7 +152,7 @@ header {
 		color: #FFED00;
 	}
 
-	#mainNav.is-visible .navbar-nav {
+	#mainNav.nav-is-visible .navbar-nav {
 		background-color: rgb(15, 98, 146, 0.7);
 		transition: background-color 0.2s;
 		border-radius: 0px 0px 30px 30px;
@@ -163,7 +163,7 @@ header {
 		color: #FFED00;
 	}
 
-	#mainNav.is-visible {
+	#mainNav.nav-is-visible {
 		/* if the user changes the scrolling direction, we show the header */
 		transform: translate3d(0, 100%, 0);
 	}
@@ -420,7 +420,7 @@ header .navbar .cta-btn a:hover {
 	align-items: center;
 	color: inherit;
 	cursor: pointer;
-	width: 75%;
+	width: 66%;
 	height: 70vh;
 	perspective: 1000px;
 	margin: auto;

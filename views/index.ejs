@@ -13,6 +13,7 @@
     <!-- aos library https://michalsnik.github.io/aos/ -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/reisen-styles.css">
 
 <body>
     <header>
@@ -38,7 +39,7 @@
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                                 aria-expanded="false">Reisen</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Nizza 2017</a></li>
+                                <li><a class="dropdown-item" href="reisen">Nizza 2017</a></li>
                                 <li><a class="dropdown-item" href="#">Dublin 2018</a></li>
                                 <li><a class="dropdown-item" href="#">Albanien 2019</a></li>
                             </ul>
@@ -53,22 +54,6 @@
         <h1 class="vereinsname">Boyz<br> n-the <br> Hood</h1>
     </div>
 
-    <!-- <section id="section-Verein">
-        <div class="row">
-            <div class="col-4">
-                <h1 class="Vereinsmotto h-100">
-                    Freunde<br> für's<br> Leben
-                </h1>
-            </div>
-            <div class="col-3" style="background-color: yellow;">
-
-            </div>
-            <div class="col-5" style="background-color: aqua">
-                <img data-aos="zoom-out" data-aos-delay="100" class="aos-init aos-animate logo"
-                    src="images/logo-bw.png" alt="logo black/white">
-            </div>
-        </div>
-    </section> -->
     <section id="section-Verein">
         <div class="grid-container-Verein">
             <div class="Vereinsmotto">
@@ -142,7 +127,8 @@
                                         <div class="name">Jakob Timmermann</div>
                                         <p class="zitat">"Alle vier unsicher!"</p>
                                         <p class="bio">
-                                            Wann schon hat die Welt einen Protokollanten schon jemals so ausschweifend tanzen gesehen?
+                                            Wann schon hat die Welt einen Protokollanten schon jemals so ausschweifend
+                                            tanzen gesehen?
                                         </p>
                                     </div>
                                 </div>
@@ -166,6 +152,72 @@
 
     </section>
 
+    <section id="section-Reisen">
+        <div class="container-Reisen">
+            <div class="c-mouse-vertical-carousel js-carousel u-media-wrapper u-media-wrapper--16-9">
+                <ul class="c-mouse-vertical-carousel__list js-carousel-list">
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="0"
+                        style="visibility: inherit; opacity: 1;">
+                        <a href="">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    2017
+                                </span> Frankreich
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                Nizza
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="1"
+                        style="visibility: inherit; opacity: 0.5; transform: matrix(1, 0, 0, 1, 5, 0);">
+                        <a href="">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    2018
+                                </span> Irland
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                Dublin <span class="c-span-small"> und Gallwick</span>
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="c-mouse-vertical-carousel__list-item js-carousel-list-item" data-item-id="2"
+                        style="visibility: inherit; opacity: 0.25; transform: matrix(1, 0, 0, 1, 10, 0);">
+                        <a href="">
+                            <p class="c-mouse-vertical-carousel__eyebrow u-b4">
+                                <span>
+                                    2019
+                                </span> Albanien
+                            </p>
+
+                            <p class="c-mouse-vertical-carousel__title u-a5">
+                                Tirana <span class="c-span-small">und mehr</span>
+                            </p>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img"
+                    style='background-image: url("/images/Reisen/2017_Nizza/thumbnail.jpeg"); visibility: hidden; opacity: 0; transform: matrix(1.05, 0, 0, 1.05, 0, 0);'></i>
+                <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img"
+                    style='background-image: url("/images/Reisen/2018_Dublin/thumbnail.jpeg"); visibility: hidden; opacity: 0; transform: matrix(1.05, 0, 0, 1.05, 0, 0);'></i>
+                <i class="c-mouse-vertical-carousel__bg-img js-carousel-bg-img"
+                    style='background-image: url("/images/Reisen/2017_Nizza/thumbnail.jpeg"); visibility: hidden; opacity: 0; transform: matrix(1.05, 0, 0, 1.05, 0, 0);'></i>
+                <i class="c-gradient-overlay"></i>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
@@ -179,6 +231,10 @@
     </script>
     <script src="/js/navbarScrolling.js"></script>
     <script src="/js/ownScripts.js"></script>
+
+    <!-- scripts required for reise section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="/js/reiseScript.js"></script>
 </body>
 
 

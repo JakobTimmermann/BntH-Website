@@ -11,9 +11,13 @@ app.use(express.urlencoded({
 app.use(express.static("public")); // Upload static files in public folder!
 
 app.get("/", async (req, res) => {
-
     res.render("index", {});
 });
+
+app.get("/reisen", async (req, res) => {
+    res.render("reisen", {});
+});
+
 
 
 

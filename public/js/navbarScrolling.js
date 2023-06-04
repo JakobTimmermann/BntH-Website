@@ -12,14 +12,14 @@ window.addEventListener('DOMContentLoaded', () => {
         if (currentTop < scrollPos) {
             // Scrolling Up
             if (currentTop > 0 && mainNav.classList.contains('is-fixed')) {
-                mainNav.classList.add('is-visible');
+                mainNav.classList.add('nav-is-visible');
             } else {
                 console.log(123);
-                mainNav.classList.remove('is-visible', 'is-fixed');
+                mainNav.classList.remove('nav-is-visible', 'is-fixed');
             }
         } else {
             // Scrolling Down
-            mainNav.classList.remove(['is-visible']);
+            mainNav.classList.remove(['nav-is-visible']);
             if (currentTop > headerHeight && !mainNav.classList.contains('is-fixed')) {
                 mainNav.classList.add('is-fixed');
             }
