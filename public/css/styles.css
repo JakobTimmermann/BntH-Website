@@ -109,6 +109,7 @@ header {
 
 
 .vereinsname {
+	float: left;
 	color: #FFED00;
 	text-transform: uppercase;
 	letter-spacing: .2em;
@@ -376,8 +377,10 @@ header .navbar .cta-btn a:hover {
 
 .grid-container-Mitglieder {
 	display: grid;
-	grid-template-rows: 50vh 50vh;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 100vh;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
 }
 
 .mitglieder-background:before {
@@ -398,6 +401,18 @@ header .navbar .cta-btn a:hover {
 	z-index: -1;
 }
 
+.carousel-container {
+	width: 100vh;
+	height: 100vb;
+	display: flex;
+	align-items: center;
+
+}
+
+#carouselExample {
+	width: 100%;
+}
+
 /* Mitglieder Flipcard */
 
 .card {
@@ -405,8 +420,8 @@ header .navbar .cta-btn a:hover {
 	align-items: center;
 	color: inherit;
 	cursor: pointer;
-	width: 50%;
-	height: 70%;
+	width: 75%;
+	height: 70vh;
 	perspective: 1000px;
 	margin: auto;
 	position: relative
@@ -545,51 +560,22 @@ header .navbar .cta-btn a:hover {
 }
 
 .back .name {
-	font-size: calc(0.5em + 0.5vw);
+	font-size: calc(1.0rem + 2.5vh);
+	font-weight: 600;
 }
+
 .back p {
-	font-size: calc(0.4rem + 0.5vw);
+	margin: 5%;
+	font-size: calc(0.8rem + 1.5vh);
+	color: black;
+}
+
+.back .zitat {
+	color: #b3b3b3;
+	font-size: calc(1.0rem + 1.5vh);
+	font-style: italic;
 }
 
 .large {
 	font-size: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Test Section */
-/* .test {
-	position: sticky;
-	bottom: 0px;
-	width: 50%;
-	z-index: -1;
-	margin-left: 66%;
-}
-
-.aos-test {
-	width: 30%;
-}
-
-.hero-logo {
-	position: sticky;
-	bottom: 0px;
-	width: 50%;
-	z-index: 1;
-	margin-left: 66%;
-}
-
-
-.Vereins-text {
-	width: 60%;
-} */
