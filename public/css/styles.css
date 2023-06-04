@@ -53,6 +53,10 @@ a {
 	transition: .3s all ease;
 }
 
+.bold {
+	font-weight: 600;
+}
+
 @media only screen and (min-width: 502px) and (max-width: 576px) {
 	header br {
 		display: none;
@@ -483,8 +487,7 @@ header .navbar .cta-btn a:hover {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: linear-gradient(135deg, #1a9be6, #1a57e6);
-	opacity: 0.25;
+	background: linear-gradient(135deg, rgba(26, 155, 230, 0.01), rgba(26, 87, 230, 0.2));
 	z-index: -1;
 }
 
@@ -497,7 +500,7 @@ header .navbar .cta-btn a:hover {
 }
 
 .back {
-	background: #fff;
+	background: white;
 	transform: rotateY(-180deg);
 	padding: 0 2em;
 }
