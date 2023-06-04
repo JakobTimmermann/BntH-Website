@@ -5,6 +5,11 @@
 #section-Reisen p {
 	text-decoration: none;
 }
+
+#section-Reisen ul {
+	list-style: none;
+}
+
 .container-Reisen {
 	display: flex;
 	flex-direction: row;
@@ -28,8 +33,8 @@
 	letter-spacing: 5px;
 	text-transform: uppercase;
 	font-weight: 700;
-	text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-	color: #fff;
+	text-shadow: 0 0 3px white; 
+	color: #0F6292;
 }
 
 .u-b4 {
@@ -37,7 +42,8 @@
 	line-height: 17px;
 	letter-spacing: 0.3px;
 	font-weight: normal;
-	color: #fff;
+	text-shadow: 0 0 3px white; 
+	color: #0F6292;
 }
 
 
@@ -60,7 +66,7 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-image: radial-gradient(circle at 49% 50%, rgba(2, 21, 25, 0.3), rgba(2, 21, 25, 0.6));
+	background-image: radial-gradient(circle at 49% 50%, rgba(246, 246, 240, 0.3), rgba(236, 230, 147, 0.1));
 }
 
 .c-mouse-vertical-carousel {
@@ -80,19 +86,20 @@
 	display: block;
 	padding-bottom: 25px;
 	padding-top: 25px;
-	padding-left: 54.1666666667%;
+	padding-right: 66.1666666667%;
+	padding-left: 10%;
 }
 
 .c-mouse-vertical-carousel__eyebrow {
 	position: relative;
 	padding-bottom: 12px;
 	padding-top: 3px;
-	font-size: 20px;
+	font-size: 22px;
 }
 
 .c-mouse-vertical-carousel__eyebrow span {
 	position: absolute;
-	left: -50px;
+	left: -60px;
 	top: 2px;
 }
 
@@ -103,7 +110,7 @@
 .c-mouse-vertical-carousel__bg-img {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 0px;
 	width: 100%;
 	height: 100%;
 	background-size: cover;
@@ -112,5 +119,13 @@
 }
 
 .c-span-small {
-	font-size: 12px;
+	font-size: 15px;
+}
+
+#img-nizza {
+	background-image: url("/images/Reisen/2017_Nizza/thumbnail.jpeg");
+	visibility: hidden;
+	transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+	height: 130%;
+	width: 110%;
 }

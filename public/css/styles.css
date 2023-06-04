@@ -109,6 +109,7 @@ header {
 
 
 .vereinsname {
+	position: absolute;
 	float: left;
 	color: #FFED00;
 	text-transform: uppercase;
@@ -120,6 +121,13 @@ header {
 	z-index: 2;
 }
 
+.push-right {
+	display: flex;
+	justify-content: right;	
+	text-align: right !important;
+	margin-left: 0px !important;
+	margin-right: 2rem;
+}
 /* header .navbar-brand.absolute {
 	position: absolute;
 } */
