@@ -155,7 +155,7 @@ header {
 	#mainNav.is-fixed {
 		/* when the user scrolls down, we hide the header right above the viewport */
 		position: relative;
-		top: -83px;
+		top: -61px;
 		transition: transform 0.2s;
 	}
 
@@ -206,7 +206,7 @@ header {
 } */
 
 header .navbar .nav-link {
-	padding: 20px 10px !important;
+	padding: 10px 10px !important;
 	outline: none !important;
 	font-size: 1.2rem;
 	color: #FFED00;
@@ -368,7 +368,7 @@ header .navbar .cta-btn a:hover {
 	background-size: calc(180% - 20vw) auto;
 	background-repeat: no-repeat;
 	background-position: 150px 0px;
-	opacity: 0.8;
+	opacity: 0.3;
 }
 
 .grid-container-Verein {

@@ -14,28 +14,29 @@ const getSlideIndex = ($slide) => {
     return [...$q(".carousel__item")].indexOf($slide);
 }
 const prevSlide = () => {
-    const index = getActiveIndex();
-    const $slides = $q(".carousel__item");
-    const $last = $slides[$slides.length - 1];
-    $last.remove();
-    $list.prepend($last);
-    activateSlide($q(".carousel__item")[index]);
+    const prevIndex = getActiveIndex() - 1;
+    // const $slides = $q(".carousel__item");
+    // const $last = $slides[$slides.length - 1];
+    // $last.remove();
+    // $list.prepend($last);
+    activateSlide($q(".carousel__item")[prevIndex]);
 }
 const nextSlide = () => {
-    const index = getActiveIndex();
-    const $slides = $q(".carousel__item");
-    const $first = $slides[0];
-    $first.remove();
-    $list.append($first);
-    activateSlide($q(".carousel__item")[index]);
+    const nextIndex = getActiveIndex() + 1;
+    // const $slides = $q(".carousel__item");
+    // const $first = $slides[0];
+    // $first.remove();
+    // $list.append($first);
+    activateSlide($q(".carousel__item")[nextIndex]);
 }
 const chooseSlide = (e) => {
-    const max = (window.matchMedia("screen and ( max-width: 600px)").matches) ? 5 : 8;
+    // const max = (window.matchMedia("screen and ( max-width: 600px)").matches) ? 1 : 5;
     const $slide = e.target.closest(".carousel__item");
-    const index = getSlideIndex($slide);
-    if (index < 3 || index > max) return;
-    if (index === max) nextSlide();
-    if (index === 3) prevSlide();
+    // const index = getSlideIndex($slide);
+    // console.log(index);
+    // if (index < 3 || index > max) return;
+    // if (index === max) nextSlide();
+    // if (index === 3) prevSlide();
     activateSlide($slide);
 }
 const activateSlide = ($slide) => {
@@ -79,9 +80,9 @@ const handleSlideKey = (e) => {
 const startAuto = () => {
     auto = setInterval(autoSlide, 3000);
 }
-startAuto();
-$next.addEventListener("click", handleNextClick);
-$prev.addEventListener("click", handlePrevClick);
+// startAuto();
+// $next.addEventListener("click", handleNextClick);
+// $prev.addEventListener("click", handlePrevClick);
 $list.addEventListener( "click", handleSlideClick );
 $list.addEventListener("focusin", handleSlideClick);
 $list.addEventListener("keyup", handleSlideKey);

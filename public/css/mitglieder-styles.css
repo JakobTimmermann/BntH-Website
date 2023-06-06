@@ -1,21 +1,17 @@
 :root {
-    --height: calc( 80vh - 50px );
-    --width: 40vw;
-}
-
-.carousel {
-    display: grid;
-    transform: translate3d(0,0,0.1px);
+    --height: calc( 80vh - 20px );
+    --width: 33vw;
 }
 
 .carousel__list {
+    position: relative;
     display: flex;
     overflow: hidden;
     list-style: none;
-    padding: 2em 0 3em;
+    padding: 4em 0 3em;
     margin: 0;
     contain: layout;
-    isolation: isolate;
+    
 }
 
 .carousel__item {
@@ -33,6 +29,7 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 15px 2px, rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
     contain: layout;
     isolation: isolate;
+    outline: none !important;
 }
 
 .carousel__item,
@@ -77,8 +74,8 @@
         flex-grow: 0;
     }
 
-    .carousel__item:nth-child(3),
-    .carousel__item:nth-child(7) {
+    .carousel__item:nth-child(0),
+    .carousel__item:nth-child(5) {
         flex: 0 0 10px;
     }
 
@@ -114,39 +111,39 @@
 
 @media screen and (min-width: 600px) {
 
-    .carousel__item:nth-child(3),
-    .carousel__item:nth-child(10) {
+    /* .carousel__item:nth-child(2),
+    .carousel__item:nth-child(11) {
         flex: 0 0 10px;
     }
 
-    .carousel__item:nth-child(2),
-    .carousel__item:nth-child(11) {
+    .carousel__item:nth-child(1),
+    .carousel__item:nth-child(12) {
         flex: 0 0 5px;
         transform: translateX(-50px);
     }
 
-    .carousel__item:nth-child(11) {
+    .carousel__item:nth-child(12) {
         transform: translateX(50px);
-    }
+    } */
 
-    .carousel__item:nth-child( 1 ),
+    /* .carousel__item:nth-child( 1 ),
     .carousel__item:nth-child( n + 12 ) {
         flex: 0 0 0px;
         margin: 0;
         box-shadow: none;
         opacity: 0!important;
-    }
+    } */
 
-    .carousel__item:not(:nth-child( n + 5 )) img,
+    /* .carousel__item:not(:nth-child( n + 5 )) img,
     .carousel__item:nth-child( n + 9 ) img {
         opacity: 0.8;
-    }
+    } */
 
-    .carousel__item:not(:nth-child( n + 4 )) *,
+    /* .carousel__item:not(:nth-child( n + 4 )) *,
     .carousel__item:nth-child( n + 10 ) * {
         opacity: 0!important;
     }
-    
+     */
 }
 
 .carousel__item img {
@@ -192,7 +189,7 @@
     min-height: 200px;
     padding: 1em;
     z-index: 2;
-    background-image: radial-gradient( ellipse at 0px 0px, rgba(0,0,0,0.4) 20%, transparent 50% );
+    background-image: radial-gradient( ellipse at 0px 0px, rgba(15,98,146,0.4) 20%, transparent 50% );
     background-size: 170% 200px;
     background-repeat: no-repeat;
     position: absolute;
@@ -209,7 +206,6 @@
 }
 
 .carousel__contents .user__title {
-    font-family: lexend;
     font-size: .875em;
     letter-spacing: 1.25px;
     font-weight: 500;
@@ -273,61 +269,13 @@
     transition-delay: 0.05s;
 }
 
-/*
 
-    
-
-
-
-
-
-
-
-
-
-
-
-    non-demo css
-*/
-
-button {
-    background: hsl(var(--canvas), 10%, 10%);
-    color: inherit;
-    border: none;
-    border-radius: 0.5em;
-    padding: 0.25em 0.5em;
-    font-family: inherit;
-    font-size: inherit;
-}
-
-
-.carousel__nav {
-    padding: 1em;
-    justify-self: end;
-    grid-row: 1;
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
-}
-
-button {
-    display: flex;
-    gap: .5em;
-    padding: 0.5em 1.5em;
-}
-
-button span,
-button svg {
-    margin: 0;
-    padding: 0;
-    fill: none;
-}
-
-button path {
-    fill: currentColor;
-}
-
-body, html {
-    padding: 0;
-    align-items: start;
-}
+.demo-bg {
+  opacity: 0.2;
+  position:absolute;
+  left: 0;
+  top: 100vh;
+  width: 100%;
+  height: auto;
+  z-index: -1000;
+} 
