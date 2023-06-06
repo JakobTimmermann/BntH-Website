@@ -82,7 +82,7 @@ header .navbar-nav {
 }
 
 .navbar-toggler-item {
-	color: #FFED00;
+	color: rgb(255, 237, 0);
 	/* ToDo does not work! */
 }
 
@@ -161,7 +161,7 @@ header {
 
 
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a {
-		color: #FFED00;
+		color: rgb(255, 237, 0);
 	}
 
 	#mainNav.nav-is-visible .navbar-nav {
@@ -221,11 +221,11 @@ header .navbar .nav-link {
 }
 
 header .navbar .nav-link:hover {
-	color: #0F6292;
+	color: rgb(16, 99, 148);
 }
 
 header .navbar:hover {
-	color: #0F6292;
+	color: rgb(15, 98, 146);
 }
 
 @media (max-width: 1199.98px) {
@@ -365,9 +365,9 @@ header .navbar .cta-btn a:hover {
 	position: relative;
 	object-fit: cover;
 	background-image: url('/images/logo-bw.png');
-	background-size: calc(180% - 20vw);
+	background-size: calc(180% - 20vw) auto;
 	background-repeat: no-repeat;
-	background-position: 150px -0px;
+	background-position: 150px 0px;
 	opacity: 0.8;
 }
 
@@ -375,6 +375,7 @@ header .navbar .cta-btn a:hover {
 	display: grid;
 	grid-template-rows: 100vh;
 	grid-template-columns: 3fr 2fr calc(200px + 30vw);
+	overflow: hidden;
 }
 
 #section-Verein p {
@@ -589,4 +590,8 @@ header .navbar .cta-btn a:hover {
 
 .large {
 	font-size: 2rem;
+}
+
+#last {
+	z-index: 100;
 }

@@ -78,7 +78,8 @@
 	width: 100%;
 	position: absolute;
 	left: 0;
-	top: 50%;
+	/* Shift carousel to the top */
+	top: 25%;
 	z-index: 1;
 }
 
@@ -126,6 +127,8 @@
 	background-image: url("/images/Reisen/2017_Nizza/thumbnail.jpeg");
 	visibility: hidden;
 	transform: matrix(1.05, 0, 0, 1.05, 0, 0);
-	height: 130%;
-	width: 110%;
+	/* height: 130vh;
+	width: 110vw;
+	background-repeat: no-repeat;
+	object-fit: cover; */
 }
