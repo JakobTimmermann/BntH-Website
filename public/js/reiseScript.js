@@ -36,7 +36,7 @@ class VerticalMouseDrivenCarousel {
 	init() {
 		TweenMax.set(this.getBgImgs(), {
 			autoAlpha: 0,
-			scale: 1.05
+			scale: 1.1
 		});
 
 		TweenMax.set(this.getBgImgs()[0], {
@@ -45,7 +45,7 @@ class VerticalMouseDrivenCarousel {
 		});
 
 		this.listItems = this.getListItems().length - 1;
-		
+
 		this.listOpacityController(0);
 	}
 
@@ -56,13 +56,17 @@ class VerticalMouseDrivenCarousel {
 		this.getCarousel().addEventListener(
 			"mousemove",
 			event => {
-				this.posY = event.pageY - this.getCarousel().offsetTop;
-				let offset = -this.posY / carouselHeight * listHeight;
+				if (event.pageX / screen.width < 0.25) {
+					console.log(event.pageX);
+					this.posY = event.pageY - this.getCarousel().offsetTop;
+					let offset = -this.posY / carouselHeight * listHeight;
 
-				TweenMax.to(this.getList(), 0.3, {
-					y: offset,
-					ease: Power4.easeOut
-				});
+					TweenMax.to(this.getList(), 1, // determines the scrolling speed //
+						{
+							y: offset,
+							ease: Power4.easeOut
+						});
+				}
 			},
 			false
 		);
@@ -71,27 +75,29 @@ class VerticalMouseDrivenCarousel {
 	bgImgController() {
 		for (const link of this.getListItems()) {
 			link.addEventListener("mouseenter", ev => {
-				let currentId = ev.currentTarget.dataset.itemId;
+				if (ev.pageX / screen.width < 0.25) {
+					let currentId = ev.currentTarget.dataset.itemId;
 
-				this.listOpacityController(currentId);
+					this.listOpacityController(currentId);
 
-				TweenMax.to(ev.currentTarget, 0.3, {
-					autoAlpha: 1
-				});
+					TweenMax.to(ev.currentTarget, 0.8, {
+						autoAlpha: 1
+					});
 
-				TweenMax.to(".is-visible", 0.2, {
-					autoAlpha: 0,
-					scale: 1.05
-				});
+					TweenMax.to(".is-visible", 0.8, {
+						autoAlpha: 0,
+						scale: 1.1
+					});
 
-				if (!this.getBgImgs()[currentId].classList.contains("is-visible")) {
-					this.getBgImgs()[currentId].classList.add("is-visible");
+					if (!this.getBgImgs()[currentId].classList.contains("is-visible")) {
+						this.getBgImgs()[currentId].classList.add("is-visible");
+					}
+
+					TweenMax.to(this.getBgImgs()[currentId], 0.6, {
+						autoAlpha: 1,
+						scale: 1
+					});
 				}
-
-				TweenMax.to(this.getBgImgs()[currentId], 0.6, {
-					autoAlpha: 1,
-					scale: 1
-				});
 			});
 		}
 	}
@@ -103,7 +109,8 @@ class VerticalMouseDrivenCarousel {
 
 		if (aboveCurrent > 0) {
 			for (let i = 1; i <= aboveCurrent; i++) {
-				let opacity = 0.5 / i;
+				// Opacity inheritance
+				let opacity = 0.9 / i;
 				let offset = 5 * i;
 				TweenMax.to(this.getListItems()[id + i], 0.5, {
 					autoAlpha: opacity,
