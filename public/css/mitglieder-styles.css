@@ -157,7 +157,7 @@
     z-index: -1;
     aspect-ratio: 2/3;
     object-fit: cover;
-    filter: saturate(0.2) contrast(0.75) brightness(1.1);
+    filter: saturate(0.3) contrast(0.75) brightness(1.1);
 }
 
 .carousel__item::after {
@@ -168,7 +168,7 @@
     height: 100%;
     z-index: 1;
     opacity: 1;
-	background: linear-gradient(160deg, rgba(26, 155, 230, 0.01) 40% , rgb(237, 228, 91, 0.5) 70%, rgb(15, 98, 146, 0.6) 100%);
+	background: linear-gradient(160deg, rgba(26, 155, 230, 0.01) 40% , rgb(237, 228, 91, 0.3) 70%, rgb(15, 98, 146, 0.6) 100%);
     transition: all .66s cubic-bezier(.55,.24,.18,1);
 }
 
@@ -208,10 +208,11 @@
 .carousel__contents .user__title {
     font-size: .875em;
     letter-spacing: 1.25px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     color: transparent;
     background: linear-gradient( 270deg, rgb(67, 255, 0), rgb(0, 255, 247) );
+    background: linear-gradient( 270deg, #FFED00, #abd055 );
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0.85;

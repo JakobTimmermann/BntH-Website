@@ -57,7 +57,9 @@
 }
 
 .u-media-wrapper.u-media-wrapper--16-9 {
-	padding-bottom: 56.25%;
+	/* This determines the height of the Reise Carousel */
+	padding-bottom: 49%; /* try and error */
+
 }
 
 .c-gradient-overlay {
