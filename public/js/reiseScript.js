@@ -57,7 +57,6 @@ class VerticalMouseDrivenCarousel {
 			"mousemove",
 			event => {
 				if (event.pageX / screen.width < 0.25) {
-					console.log(event.pageX);
 					this.posY = event.pageY - this.getCarousel().offsetTop;
 					let offset = -this.posY / carouselHeight * listHeight;
 

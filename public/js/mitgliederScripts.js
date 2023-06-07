@@ -14,29 +14,55 @@ const getSlideIndex = ($slide) => {
     return [...$q(".carousel__item")].indexOf($slide);
 }
 const prevSlide = () => {
-    const prevIndex = getActiveIndex() - 1;
-    // const $slides = $q(".carousel__item");
-    // const $last = $slides[$slides.length - 1];
-    // $last.remove();
-    // $list.prepend($last);
-    activateSlide($q(".carousel__item")[prevIndex]);
+    const index = getActiveIndex();
+    const $slides = $q(".carousel__item");
+    const $last = $slides[$slides.length - 1];
+    $last.remove();
+    $list.prepend($last);
+    activateSlide($q(".carousel__item")[index]);
+}
+const prev2Slide = () => {
+    const index = getActiveIndex();
+    const $slides = $q(".carousel__item");
+    var $last = $slides[$slides.length - 1];
+    $last.remove();
+    $list.prepend($last);
+    var $last = $slides[$slides.length - 2];
+    $last.remove();
+    $list.prepend($last);
+    activateSlide($q(".carousel__item")[index]);
 }
 const nextSlide = () => {
-    const nextIndex = getActiveIndex() + 1;
-    // const $slides = $q(".carousel__item");
-    // const $first = $slides[0];
-    // $first.remove();
-    // $list.append($first);
-    activateSlide($q(".carousel__item")[nextIndex]);
+    const index = getActiveIndex();
+    const $slides = $q(".carousel__item");
+    const $first = $slides[0];
+    $first.remove();
+    $list.append($first);
+    activateSlide($q(".carousel__item")[index]);
 }
+
+const next2Slide = () => {
+    const index = getActiveIndex();
+    const $slides = $q(".carousel__item");
+    var $first = $slides[0];
+    $first.remove();
+    $list.append($first);
+    var $first = $slides[1];
+    $first.remove();
+    $list.append($first);
+    activateSlide($q(".carousel__item")[index]);
+}
+
 const chooseSlide = (e) => {
     // const max = (window.matchMedia("screen and ( max-width: 600px)").matches) ? 1 : 5;
     const $slide = e.target.closest(".carousel__item");
-    // const index = getSlideIndex($slide);
-    // console.log(index);
-    // if (index < 3 || index > max) return;
-    // if (index === max) nextSlide();
-    // if (index === 3) prevSlide();
+    const index = getSlideIndex($slide);
+    // To have the active card always in the middle uncomment the following 
+    // if (index === 2) return;
+    // if (index === 4) next2Slide();
+    // if (index === 3) nextSlide();
+    // if (index === 1) prevSlide();
+    // if (index === 0) prev2Slide();
     activateSlide($slide);
 }
 const activateSlide = ($slide) => {
@@ -83,6 +109,6 @@ const startAuto = () => {
 // startAuto();
 // $next.addEventListener("click", handleNextClick);
 // $prev.addEventListener("click", handlePrevClick);
-$list.addEventListener( "click", handleSlideClick );
+$list.addEventListener("click", handleSlideClick);
 $list.addEventListener("focusin", handleSlideClick);
 $list.addEventListener("keyup", handleSlideKey);

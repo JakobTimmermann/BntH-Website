@@ -1,6 +1,6 @@
 :root {
     --height: calc( 80vh - 20px );
-    --width: 33vw;
+    --width: 28vw;
 }
 
 .carousel__list {
@@ -279,4 +279,14 @@
   width: 100%;
   height: auto;
   z-index: -1000;
-} 
+}
+
+
+/* Flipcard Fiddling */
+.card {
+	display: flex;
+	color: inherit;
+	cursor: pointer;
+	width: var(--width); 
+	height: var(--height);
+}
