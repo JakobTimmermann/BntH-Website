@@ -1,3 +1,5 @@
+// To have the active card always in the middle set shuffle to true 
+const shuffle = false;
 const d = document;
 const $q = d.querySelectorAll.bind(d);
 const $g = d.querySelector.bind(d);
@@ -13,13 +15,18 @@ const getActiveIndex = () => {
 const getSlideIndex = ($slide) => {
     return [...$q(".carousel__item")].indexOf($slide);
 }
-const prevSlide = () => {
+const prevSlide = (shuffle) => {
     const index = getActiveIndex();
-    const $slides = $q(".carousel__item");
-    const $last = $slides[$slides.length - 1];
-    $last.remove();
-    $list.prepend($last);
-    activateSlide($q(".carousel__item")[index]);
+    console.log(shuffle);
+    if (shuffle) {
+        const $slides = $q(".carousel__item");
+        const $last = $slides[$slides.length - 1];
+        $last.remove();
+        $list.prepend($last);
+        activateSlide($q(".carousel__item")[index]);
+    } else {
+        activateSlide($q(".carousel__item")[index - 1]);
+    }
 }
 const prev2Slide = () => {
     const index = getActiveIndex();
@@ -34,11 +41,15 @@ const prev2Slide = () => {
 }
 const nextSlide = () => {
     const index = getActiveIndex();
-    const $slides = $q(".carousel__item");
-    const $first = $slides[0];
-    $first.remove();
-    $list.append($first);
-    activateSlide($q(".carousel__item")[index]);
+    if (shuffle) {
+        const $slides = $q(".carousel__item");
+        const $first = $slides[0];
+        $first.remove();
+        $list.append($first);
+        activateSlide($q(".carousel__item")[index]);
+    } else {
+        activateSlide($q(".carousel__item")[index + 1]);
+    }
 }
 
 const next2Slide = () => {
@@ -57,12 +68,13 @@ const chooseSlide = (e) => {
     // const max = (window.matchMedia("screen and ( max-width: 600px)").matches) ? 1 : 5;
     const $slide = e.target.closest(".carousel__item");
     const index = getSlideIndex($slide);
-    // To have the active card always in the middle uncomment the following 
-    // if (index === 2) return;
-    // if (index === 4) next2Slide();
-    // if (index === 3) nextSlide();
-    // if (index === 1) prevSlide();
-    // if (index === 0) prev2Slide();
+    if (shuffle) {
+        if (index === 2) return;
+        if (index === 4) next2Slide();
+        if (index === 3) nextSlide(shuffle);
+        if (index === 1) prevSlide(shuffle);
+        if (index === 0) prev2Slide();
+    }
     activateSlide($slide);
 }
 const activateSlide = ($slide) => {
@@ -95,7 +107,7 @@ const handleSlideKey = (e) => {
     switch (e.keyCode) {
         case 37:
         case 65:
-            handlePrevClick();
+            handlePrevClick(shuffle);
             break;
         case 39:
         case 68:
