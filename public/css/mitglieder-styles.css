@@ -166,12 +166,10 @@
     height: 100%;
     z-index: 1;
     opacity: 1;
-    background: linear-gradient(
-        160deg,
-        rgba(26, 155, 230, 0.01) 40%,
-        rgb(237, 228, 91, 0.3) 70%,
-        rgb(15, 98, 146, 0.6) 100%
-    );
+    background: linear-gradient(160deg,
+            rgba(26, 155, 230, 0.01) 40%,
+            rgb(237, 228, 91, 0.3) 70%,
+            rgb(15, 98, 146, 0.6) 100%);
     transition: all 0.66s cubic-bezier(0.55, 0.24, 0.18, 1);
 }
 
@@ -187,16 +185,14 @@
 
 .carousel__contents {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: start;
     min-height: 200px;
-    padding: 1rem;
+    padding: 1.8rem;
     z-index: 2;
-    background-image: radial-gradient(
-        ellipse at 0px 0px,
-        rgba(15, 98, 146, 0.4) 20%,
-        transparent 50%
-    );
+    background-image: radial-gradient(ellipse at 0px 0px,
+            rgba(15, 98, 146, 0.4) 20%,
+            transparent 50%);
     background-size: 170% 200px;
     background-repeat: no-repeat;
     position: absolute;
@@ -204,16 +200,21 @@
     left: 0;
 }
 
-.carousel__contents .user__name {
+.mitglieder__name {
     color: #e8eff4;
     font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: 0.8px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+    padding-bottom: 0.5rem;
+    max-width: 18em;
+    margin: 0 !important;
 }
 
-.carousel__contents .user__title {
+.mitglieder__titel {
     font-size: 0.875rem;
+    font-size: 1rem;
     letter-spacing: 1.25px;
     font-weight: 600;
     text-transform: uppercase;
@@ -224,17 +225,17 @@
     -webkit-background-clip: text;
     opacity: 0.85;
     text-wrap: balance;
-    margin-bottom: 0.5em;
+    line-height: 1.1;
+    max-width: 18em;
+    margin: 0 !important;
 }
 
-.carousel__contents .user__title,
-.carousel__contents .user__name {
-    margin: 0;
-    line-height: 1.1;
+.carousel__box .mitglieder__titel,
+.carousel__box .mitglieder__name {
     opacity: 0;
     transform: translateX(-200px);
-    transition-duration: 1s;
-    max-width: 18em;
+    transition-duration: 1.5 s;
+    margin: 0 !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -247,11 +248,9 @@
         transform-origin: bottom right;
         align-items: end;
         justify-content: end;
-        background-image: radial-gradient(
-            ellipse at 100% 100%,
-            rgba(0, 0, 0, 0.4) 0%,
-            transparent 50%
-        );
+        background-image: radial-gradient(ellipse at 100% 100%,
+                rgba(0, 0, 0, 0.4) 0%,
+                transparent 50%);
         background-position: -100% 100%;
         flex-direction: column;
         position: absolute;
@@ -264,8 +263,8 @@
         background-position: 100% 100%;
     }
 
-    .carousel__contents .user__title,
-    .carousel__contents .user__name {
+    .mitglieder__titel,
+    .mitglieder__name {
         max-width: 70vh;
         transform: translateX(200px);
     }
@@ -277,11 +276,135 @@
     opacity: 1;
 }
 
-[data-active] .carousel__contents .user__name {
+[data-active] .mitglieder__name {
     transition-delay: 0.1s;
 }
 
-[data-active] .carousel__contents .user__title {
+[data-active] .mitglieder__titel {
     opacity: 0.85;
     transition-delay: 0.05s;
 }
+
+.demo-bg {
+    opacity: 0.2;
+    position: absolute;
+    left: 0;
+    top: 100vh;
+    width: 100%;
+    height: auto;
+    z-index: -1000;
+}
+
+/* Flipcard Fiddling */
+
+[data-active] .active {
+    transform: translateZ(0px) rotateY(180deg) !important;
+    transition-duration: 0.75s;
+}
+
+.active:after {
+    display: none;
+}
+
+.cardContainer {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    perspective: 999px;
+}
+
+.card {
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    cursor: pointer;
+    -moz-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: var(--width);
+    height: var(--height);
+    border-radius: 5px;
+    box-shadow: 0 14px 50px -4px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4);
+}
+
+.card:hover {
+    transform: translateZ(40px);
+}
+
+.card .side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    flex-direction: column;
+    width: var(--width);
+    height: var(--height);
+    background-color: white;
+}
+
+
+.card .front {
+    z-index: 2;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 1.7rem;
+    background-image: radial-gradient(ellipse at 0px 0px,
+            rgba(15, 98, 146, 0.5) 20%,
+            rgba(247, 192, 74, 0.2) 80%);
+    text-align: center;
+    line-height: 1.5;
+}
+
+.back .mitglieder__titel,
+.back .mitglieder__name {
+    transition-duration: 1.5 s;
+    max-width: none;
+    line-height: 1.5;
+}
+
+.mitglieder__zitat {
+    color: black;
+    margin: 1rem 1rem;
+    font-size: 0.875rem;
+    font-size: 1rem;
+    font-style: italic;
+
+}
+
+.mitglieder__bio {
+    font-size: 1rem;
+    color: rgb(15, 98, 146);
+    font-weight: 500;
+    color: transparent;
+    background: linear-gradient(270deg, rgb(15, 98, 146), rgb(92, 126, 236));
+    /* background: radial-gradient(ellipse at 0px 0px,
+    rgb(255, 237, 74) 20%, 
+    rgb(15, 98, 146) 50%); */
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin: 0rem 1rem;
+}
+
+/* Do I need this? */
+/* .card:hover:after {
+  opacity: 1;
+} */
+
+/* *,
+*:after,
+*:before {
+  box-sizing: border-box;
+} */

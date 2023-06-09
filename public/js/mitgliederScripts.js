@@ -17,7 +17,6 @@ const getSlideIndex = ($slide) => {
 }
 const prevSlide = (shuffle) => {
     const index = getActiveIndex();
-    console.log(shuffle);
     if (shuffle) {
         const $slides = $q(".carousel__item");
         const $last = $slides[$slides.length - 1];

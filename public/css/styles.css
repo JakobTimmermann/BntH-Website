@@ -76,7 +76,7 @@ header .navbar-nav {
 }
 
 .navbar-toggler {
-	color: #F7C04A;
+	color: rgb(247, 192, 74);
 	border-color: rgba(255, 255, 0, 0.52);
 	margin-top: 10px;
 }
@@ -441,22 +441,8 @@ header .navbar .cta-btn a:hover {
 	}
 } */
 
-.front,
-.back {
-	display: flex;
-	border-radius: 6px;
-	background-position: center;
-	background-size: cover;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	transform-style: preserve-3d;
-	transition: ease-in-out 600ms;
-}
 
-.back {
+/* .back {
 	text-align: center;
 	justify-content: center;
 	align-items: center;
@@ -578,7 +564,7 @@ header .navbar .cta-btn a:hover {
 	color: #b3b3b3;
 	font-size: calc(1.0rem + 1.5vh);
 	font-style: italic;
-}
+} */
 
 .large {
 	font-size: 2rem;
