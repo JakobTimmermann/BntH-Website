@@ -8,6 +8,8 @@ const $next = $g(".next");
 const $list = $g(".carousel__list");
 let auto;
 let pauser;
+let currentActiveIndex
+
 const getActiveIndex = () => {
     const $active = $g("[data-active]");
     return getSlideIndex($active);
@@ -67,6 +69,10 @@ const chooseSlide = (e) => {
     // const max = (window.matchMedia("screen and ( max-width: 600px)").matches) ? 1 : 5;
     const $slide = e.target.closest(".carousel__item");
     const index = getSlideIndex($slide);
+    if (index != currentActiveIndex) {
+        $(".card").removeClass("active");
+    }
+    currentActiveIndex = index;
     if (shuffle) {
         if (index === 2) return;
         if (index === 4) next2Slide();

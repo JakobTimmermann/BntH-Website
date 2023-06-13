@@ -14,11 +14,9 @@ app.get("/", async (req, res) => {
     res.render("index", {});
 });
 
-app.get("/reisen", async (req, res) => {
-    res.render("reisen", {});
+app.get("/mitglieder/Lorenz", async (req, res) => {
+    res.render("lenz", {});
 });
-
-
 
 
 app.listen(3000, function () {
