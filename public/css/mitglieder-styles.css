@@ -8,14 +8,16 @@
     flex-direction: column;
     justify-content: start;
 }
+
 #section-Mitglieder .vereinsname {
-    margin: 0rem; 
-	margin-top: 2rem;
-	z-index: 2;
+    margin: 0rem;
+    margin-top: 2rem;
+    z-index: 2;
     position: static !important;
     width: 100%;
     text-align: center;
 }
+
 .carousel__list {
     display: flex;
     overflow: hidden;
@@ -52,7 +54,8 @@
     user-select: none;
 }
 
-.carousel__image,
+.cardContainer,
+.carousel__box,
 .carousel__contents {
     width: var(--width);
     height: auto;
@@ -169,6 +172,13 @@
     aspect-ratio: 2/3;
     object-fit: cover;
     filter: saturate(0.3) contrast(0.75) brightness(1.1);
+}
+.cardContainer img {
+    left:30%;
+    transform: translate(-50%, -50%);
+}
+.carousel__item[data-active] img {
+    left: 50%;    
 }
 
 .carousel__item::after {
