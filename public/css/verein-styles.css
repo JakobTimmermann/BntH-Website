@@ -4,10 +4,25 @@
 	padding: 0px 30px;
 	text-align: center;
 	max-width: calc(200px + 10vw + 10vh);
-	margin-bottom: 4rem;
+	margin-bottom: 1rem;
 }
 
-#section-Verein h1 {}
+#section-Verein .button {
+    color: rgb(15, 98, 146);
+    border: solid 2px rgb(15, 98, 146); 
+	margin-bottom: 3rem;
+}
+
+#section-Verein .button:hover {
+    background-color: rgb(15, 98, 146);
+    border: solid 2px rgb(15, 98, 146); 
+	color: #FFED00;
+}
+
+.buttons-wrapper {
+	display: flex;
+	gap: 5rem;
+}
 
 .verein-content {
 	margin-top: 2rem;
@@ -69,3 +84,4 @@
 	opacity: 0.3;
 	z-index: 100;
 }
+
