@@ -101,6 +101,12 @@ a:hover {
 	background-image: url('/images/home.jpg');
 }
 
+.logo-container {
+	display: block;
+	margin-left:70%;
+	overflow: hidden;
+	filter: invert(100%);
+}
 /* Header */
 header {
 	position: fixed;
