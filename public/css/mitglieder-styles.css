@@ -12,6 +12,7 @@
 #section-Mitglieder .vereinsname {
     margin: 0rem;
     margin-top: 2rem;
+    padding-bottom: 0;
     z-index: 2;
     position: static !important;
     width: 100%;
@@ -22,7 +23,8 @@
     display: flex;
     overflow: hidden;
     list-style: none;
-    padding: 2rem;
+    padding: 3rem;
+    padding-top: 2rem;
     margin: 0;
     contain: layout;
     flex: 1;
@@ -39,7 +41,7 @@
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
-    transform: translate3d(0, 0, 0.1px);
+    /* transform: translate3d(0, 0, 0.1px); */
     box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 15px 2px,
         rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
         rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
@@ -77,92 +79,12 @@
     }
 }
 
-@media screen and (max-width: 600px) {
-    .carousel__item {
-        flex-basis: 10%;
-        margin: 0 5px;
-        border-radius: 8px;
-        font-size: 3vw;
-    }
+/* @media screen and (max-width: 600px) {
+} */
 
-    .carousel__item[data-active] {
-        flex-basis: 45%;
-        flex-grow: 0;
-    }
-
-    .carousel__item:nth-child(0),
-    .carousel__item:nth-child(5) {
-        flex: 0 0 10px;
-    }
-
-    .carousel__item:nth-child(2),
-    .carousel__item:nth-child(8) {
-        flex: 0 0 5px;
-        transform: translateX(-50px);
-    }
-
-    .carousel__item:nth-child(8) {
-        transform: translateX(50px);
-    }
-
-    .carousel__item:nth-child(1),
-    .carousel__item:nth-child(n + 9) {
-        flex: 0 0 0px;
-        margin: 0;
-        box-shadow: none;
-        opacity: 0 !important;
-    }
-
-    .carousel__item:not(:nth-child(n + 5)) img,
-    .carousel__item:nth-child(n + 7) img {
-        opacity: 0.8;
-    }
-
-    .carousel__item:not(:nth-child(n + 4)) *,
-    .carousel__item:nth-child(n + 7) * {
-        opacity: 0 !important;
-    }
-}
-
-@media screen and (min-width: 600px) {
-    /* .carousel__item:nth-child(2),
-    .carousel__item:nth-child(11) {
-        flex: 0 0 10px;
-    }
-
-    .carousel__item:nth-child(1),
-    .carousel__item:nth-child(12) {
-        flex: 0 0 5px;
-        transform: translateX(-50px);
-    }
-
-    .carousel__item:nth-child(12) {
-        transform: translateX(50px);
-    } */
-
-    /* .carousel__item:nth-child( 1 ),
-    .carousel__item:nth-child( n + 12 ) {
-        flex: 0 0 0px;
-        margin: 0;
-        box-shadow: none;
-        opacity: 0!important;
-    } */
-
-    /* .carousel__item:not(:nth-child( n + 5 )) img,
-    .carousel__item:nth-child( n + 9 ) img {
-        opacity: 0.8;
-    } */
-
-    /* .carousel__item:not(:nth-child( n + 4 )) *,
-    .carousel__item:nth-child( n + 10 ) * {
-        opacity: 0!important;
-    }
-     */
-}
 
 .carousel__item img {
-    display: block;
-    position: absolute;
+    position: fixed;
     width: var(--width);
     height: 100%;
     left: 50%;
@@ -175,10 +97,10 @@
 }
 .cardContainer img {
     left:30%;
-    transform: translate(-50%, -50%);
 }
+
 .carousel__item[data-active] img {
-    left: 50%;    
+    left: 50%;
 }
 
 .carousel__item::after {
@@ -261,7 +183,7 @@
     margin: 0 !important;
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
     .carousel__item img {
         width: calc(var(--width) * 0.5);
     }
@@ -291,7 +213,7 @@
         max-width: 70vh;
         transform: translateX(200px);
     }
-}
+} */
 
 [data-active] .carousel__contents * {
     transform: translateX(0px);
@@ -304,12 +226,12 @@
 }
 
 [data-active] .mitglieder__titel {
-    opacity: 0.85;
+    opacity: 1;
     transition-delay: 0.05s;
 }
 
-.demo-bg {
-    opacity: 0.2;
+.mitglieder-bg {
+    opacity: 0.1;
     position: absolute;
     left: 0;
     top: 100vh;

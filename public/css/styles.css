@@ -123,6 +123,7 @@ header {
 	padding: 25px 0;
 	margin-left: 5rem;
 	z-index: 2;
+	text-shadow: 4px 4px 6px rgba(15,98,146,0.65);
 }
 
 .push-right {
