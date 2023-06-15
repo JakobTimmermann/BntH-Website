@@ -335,57 +335,6 @@ header .navbar .cta-btn a:hover {
 	box-shadow: 2px 0 30px -5px rgba(0, 0, 0, 0.2);
 }
 
-.Vereinsmotto {
-	display: flex;
-	align-items: center;
-}
-
-.Vereinsmotto h1 {
-	text-align: left;
-	margin-left: 50px;
-	margin-bottom: 100px;
-	padding-right: 20px;
-	font-weight: 700;
-	color: #0F6292;
-	font-size: calc(2.5rem + 3vw);
-	line-height: calc(4rem + 3vw);
-	letter-spacing: (0.15rem + 3vw);
-}
-
-.Vereinsinfo {
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	row-gap: 100px;
-	justify-content: center;
-	color: #0F6292;
-	padding-left: 10px;
-	/* grid-column: 1/3; */
-}
-
-.logo-background {
-	position: relative;
-	object-fit: cover;
-	background-image: url('/images/logo-bw.png');
-	background-size: calc(180% - 20vw) auto;
-	background-repeat: no-repeat;
-	background-position: 150px 0px;
-	opacity: 0.3;
-}
-
-.grid-container-Verein {
-	display: grid;
-	grid-template-rows: 100vh;
-	grid-template-columns: 3fr 2fr calc(200px + 30vw);
-	overflow: hidden;
-}
-
-#section-Verein p {
-	color: #0F6292;
-	font-size: calc(1rem + 1vw);
-	padding-left: 30px;
-}
-
 .mitglieder-background {
 	position: relative;
 }
