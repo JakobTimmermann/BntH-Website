@@ -58,8 +58,9 @@
 
 .u-media-wrapper.u-media-wrapper--16-9 {
 	/* This determines the height of the Reise Carousel */
-	padding-bottom: 49%; /* try and error */
-
+	/* However values below 100% also lead to weird padding behavior */
+	/* The solution is vh! */
+	padding-bottom: 100vh; /* try and error */
 }
 
 .c-gradient-overlay {
