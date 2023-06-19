@@ -529,3 +529,33 @@ header .navbar .cta-btn a:hover {
 #last {
 	z-index: 100;
 }
+
+.button {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    height: 3rem;
+    line-height: 2.9rem;
+    width: 150px;
+    background-color: transparent;
+    border-radius: 4px;
+    text-align: center;
+    margin: 1rem auto;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    color: rgb(15, 98, 146);
+    border: solid 2px rgb(15, 98, 146); 
+}
+
+.button:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    text-shadow: none;
+    background-color: rgb(15, 98, 146);
+    border: solid 2px rgb(15, 98, 146); 
+	color: #FFED00;
+	font-weight: 900;
+	font-size: 17px;
+}
+

@@ -8,16 +8,9 @@
 }
 
 #section-Verein .button {
-    color: rgb(15, 98, 146);
-    border: solid 2px rgb(15, 98, 146); 
 	margin-bottom: 3rem;
 }
 
-#section-Verein .button:hover {
-    background-color: rgb(15, 98, 146);
-    border: solid 2px rgb(15, 98, 146); 
-	color: #FFED00;
-}
 
 .buttons-wrapper {
 	display: flex;

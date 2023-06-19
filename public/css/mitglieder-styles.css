@@ -342,33 +342,6 @@
     -webkit-background-clip: text;
     margin: 0rem 1rem 1rem 1rem;
 }
-
-.button {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 600;
-    cursor: pointer;
-    height: 3rem;
-    line-height: 2.9rem;
-    width: 150px;
-    background-color: transparent;
-    border: solid 2px #fff;
-    color: #fff;
-    border-radius: 4px;
-    text-align: center;
-    margin: 1rem auto;
-    backface-visibility: hidden;
-    transition: 0.3s ease-in-out;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.button:hover {
-    background-color: #fff;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    text-shadow: none;
-    color: rgb(15, 98, 146);
-}
-
 /* Do I need this? */
 /* .card:hover:after {
   opacity: 1;
