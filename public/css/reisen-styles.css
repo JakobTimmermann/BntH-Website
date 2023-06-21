@@ -35,21 +35,21 @@
 	text-transform: uppercase;
 	font-weight: 900;
 	text-shadow: 1px 1px 6px white;
-	color: #0F6292;
 	color: #FFED00;
-	text-shadow: 2px 2px 4px rgba(15, 98, 146, 0.863);
 	text-shadow: 2px 2px 4px rgba(20, 50, 67, 0.8);
 }
+
+
 
 .u-b4 {
 	font-size: 12px;
 	line-height: 17px;
 	letter-spacing: 0.3px;
 	font-weight: 600;
-	text-shadow: 0 0 3px white;
+	text-shadow: 1px 1px 4px white;
 	color: #0F6292;
+	color: rgba(20, 50, 67);
 }
-
 
 .u-media-wrapper {
 	position: relative;
@@ -95,8 +95,15 @@
 	display: block;
 	padding-bottom: 20px;
 	padding-top: 20px;
-	padding-right: 66.1666666667%;
+	margin-right: 66.1666666667%;
 	padding-left: 10%;
+}
+
+.c-mouse-vertical-carousel__list .emphasize p {
+	-webkit-transform: scale(1.2);
+}
+.c-mouse-vertical-carousel__list .emphasize a {
+	margin-left: 5%;
 }
 
 .c-mouse-vertical-carousel__eyebrow {
@@ -122,21 +129,57 @@
 	left: 0px;
 	width: 100%;
 	height: 100vh;
-	background-size: cover;
-	background-position: center;
 	will-change: transform;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .c-span-small {
 	font-size: 12px;
+	text-shadow: 1px 1px 3px rgba(20, 50, 67, 0.9);
 }
 
 #img-nizza {
 	background-image: url("/images/Reisen/2017_Nizza/thumbnail.jpeg");
 	visibility: hidden;
-	transform: matrix(1.05, 0, 0, 1.05, 0, 0);
-	/* height: 130vh;
-	width: 110vw;
 	background-repeat: no-repeat;
-	object-fit: cover; */
+	object-fit: cover;
+	background-position: 25% 25%;
+}
+
+#img-dublin {
+	background-image: url("/images/Reisen/2018_Dublin/thumbnail.jpeg");
+	visibility: hidden;
+	opacity: 0;
+	background-position: 50% 55%;
+}
+
+#img-tirana {
+	background-image: url("/images/Reisen/2019_Albanien/thumbnail.jpg");
+	visibility: hidden;
+	opacity: 0;
+	background-position: 50% 35%;
+}
+
+#img-tessin {
+	background-image: url("/images/Reisen/2020_Schweiz/thumbnail_flipped.jpg");
+	visibility: hidden;
+	background-size: cover;
+	background-position: 50% 55%;
+}
+
+#img-split {
+	background-image: url("/images/Reisen/2021_Kroatien/thumbnail.jpg");
+	visibility: hidden;
+	opacity: 0;
+	transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+	background-position: 50% 25%;
+}
+
+#img-kitzbuehl {
+	background-image: url("/images/Reisen/2022_Österreich/thumbnail.jpg");
+	visibility: hidden;
+	opacity: 0;
+	transform: matrix(1.05, 0, 0, 1.05, 0, 0);
+	background-position: 50% 50%;
 }

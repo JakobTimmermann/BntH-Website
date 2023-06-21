@@ -105,12 +105,18 @@ class VerticalMouseDrivenCarousel {
 		id = parseInt(id);
 		let aboveCurrent = this.listItems - id;
 		let belowCurrent = parseInt(id);
+		if (!this.getListItems()[id].classList.contains("emphasize")) {
+			for (const element of this.getListItems()){
+				element.classList.remove("emphasize");
+			}
+			this.getListItems()[id].classList.add("emphasize");
+		}
 
 		if (aboveCurrent > 0) {
 			for (let i = 1; i <= aboveCurrent; i++) {
 				// Opacity inheritance
-				let opacity = 0.9 / i;
-				let offset = 5 * i;
+				let opacity = 0.5 / i;
+				let offset = 3 * i;
 				TweenMax.to(this.getListItems()[id + i], 0.5, {
 					autoAlpha: opacity,
 					x: offset,
