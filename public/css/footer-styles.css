@@ -9,6 +9,7 @@
  .generic-anchor:hover {
      color: rgb(241, 223, 21);
      padding-left: 5px;
+     text-shadow: 4px 4px 6px rgba(20, 50, 67, 0.887);
  }
 
  .flex-rw {
@@ -106,6 +107,7 @@
  .footer-bottom-wrapper p {
      font-size: 1rem;
      color: #fff;
+     margin: 0px;
  }
 
  .footer-address {
@@ -122,6 +124,7 @@
  }
 
  .social-media-symbol:hover svg {
+     filter: drop-shadow(3px 5px 2px rgba(20, 50, 67, 0.887));
      height: 2.8rem;
  }
 
