@@ -1,13 +1,5 @@
-#section-Reisen a {
-	text-decoration: none;
-}
-
 #section-Reisen p {
 	text-decoration: none;
-}
-
-#section-Reisen ul {
-	list-style: none;
 }
 
 .container-Reisen {
@@ -21,11 +13,6 @@
 	width: 100%;
 	margin: 0 auto;
 	background-color: wheat;
-}
-
-.c-header {
-	display: block;
-	width: 50%;
 }
 
 .u-a5 {
