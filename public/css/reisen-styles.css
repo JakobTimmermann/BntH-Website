@@ -34,8 +34,11 @@
 	letter-spacing: 5px;
 	text-transform: uppercase;
 	font-weight: 900;
-	text-shadow: 1px 1px 6px white; 
+	text-shadow: 1px 1px 6px white;
 	color: #0F6292;
+	color: #FFED00;
+	text-shadow: 2px 2px 4px rgba(15, 98, 146, 0.863);
+	text-shadow: 2px 2px 4px rgba(20, 50, 67, 0.8);
 }
 
 .u-b4 {
@@ -43,7 +46,7 @@
 	line-height: 17px;
 	letter-spacing: 0.3px;
 	font-weight: 600;
-	text-shadow: 0 0 3px white; 
+	text-shadow: 0 0 3px white;
 	color: #0F6292;
 }
 
@@ -60,7 +63,8 @@
 	/* This determines the height of the Reise Carousel */
 	/* However values below 100% also lead to weird padding behavior */
 	/* The solution is vh! */
-	padding-bottom: 100vh; /* try and error */
+	padding-bottom: 100vh;
+	/* try and error */
 }
 
 .c-gradient-overlay {
