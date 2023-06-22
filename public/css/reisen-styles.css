@@ -1,5 +1,9 @@
-#section-Reisen p {
-	text-decoration: none;
+.container-header {
+	display: flex;
+	justify-content: right;
+	text-align: right !important;
+	margin-left: 0px !important;
+	margin-right: 3rem;
 }
 
 .container-Reisen {
@@ -89,6 +93,7 @@
 .c-mouse-vertical-carousel__list .emphasize p {
 	-webkit-transform: scale(1.2);
 }
+
 .c-mouse-vertical-carousel__list .emphasize a {
 	margin-left: 5%;
 }
