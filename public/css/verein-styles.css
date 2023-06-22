@@ -11,7 +11,11 @@
 	margin-bottom: 3rem;
 }
 
-
+#section-Verein .vereinsname {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
 .buttons-wrapper {
 	display: flex;
 	gap: 5rem;

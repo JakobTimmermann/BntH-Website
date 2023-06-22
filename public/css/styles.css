@@ -120,14 +120,18 @@ header {
 	position: absolute;
 	float: left;
 	color: #FFED00;
-	text-transform: uppercase;
 	letter-spacing: .2em;
 	font-weight: 900;
-	font-size: 2rem;
 	padding: 25px 0;
 	margin-left: 5rem;
 	z-index: 2;
 	text-shadow: 4px 4px 6px rgba(15, 98, 146, 0.65);
+	font-size: calc(1rem + 3.5vw);
+}
+
+.vereinsname-middle {
+	font-size: 2rem;
+	text-shadow: 2.5px 2.5px 4px rgba(15, 98, 146, 0.65);
 }
 
 .push-right {
@@ -280,9 +284,9 @@ header .navbar .cta-btn a:hover {
 
 @media (min-width: 1000px) {
 
-	.vereinsname {
-		font-size: calc(2rem + 0.8vw);
-	}
+	/* .vereinsname {
+		font-size: calc(2.5rem + 0.8vw);
+	} */
 
 	header .navbar-expand-sm .navbar-nav .nav-link {
 		font-size: calc(1rem + 0.8vw);
@@ -295,9 +299,9 @@ header .navbar .cta-btn a:hover {
 @media (min-width: 1600px) {
 
 
-	.vereinsname {
-		font-size: calc(2rem + 1vw);
-	}
+	/* .vereinsname {
+		font-size: calc(2.5rem + 1vw);
+	} */
 }
 
 
