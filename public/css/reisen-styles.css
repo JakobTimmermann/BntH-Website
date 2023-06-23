@@ -27,7 +27,7 @@
 	font-weight: 900;
 	text-shadow: 1px 1px 6px white;
 	color: #FFED00;
-	text-shadow: 2px 2px 4px rgba(20, 50, 67, 0.8);
+	text-shadow: 1px 1px 2.5px rgba(20, 50, 67, 0.8);
 }
 
 
@@ -37,7 +37,7 @@
 	line-height: 17px;
 	letter-spacing: 0.3px;
 	font-weight: 600;
-	text-shadow: 1px 1px 4px white;
+	text-shadow: 1px 1px 2.5px white;
 	color: #0F6292;
 	color: rgba(20, 50, 67);
 }
@@ -90,7 +90,11 @@
 	padding-left: 10%;
 }
 
-.c-mouse-vertical-carousel__list .emphasize p {
+.emphasize a,
+.emphasize p {
+	-webkit-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	transition: .3s all ease;
 	-webkit-transform: scale(1.2);
 }
 
@@ -98,6 +102,9 @@
 	margin-left: 5%;
 }
 
+.c-mouse-vertical-carousel__list .emphasize .u-a5 {
+	text-shadow: 2px 2px 4px rgba(20, 50, 67, 0.9);
+}
 .c-mouse-vertical-carousel__eyebrow {
 	position: relative;
 	padding-bottom: 8px;

@@ -1,5 +1,6 @@
 .hero {
     display: flex;
+    height: 100vh;
     position: relative;
     justify-content: center;
 }
@@ -28,4 +29,11 @@
 
 #section-hero .vereinsname-middle {
 	font-size: calc(1rem + 3vw);
+}
+
+.logo-container {
+	display: block;
+	margin-left: 30%;
+	overflow: hidden;
+	filter: invert(100%);
 }
