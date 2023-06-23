@@ -12,47 +12,13 @@
 
     <!-- aos library https://michalsnik.github.io/aos/ -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/footer-styles.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/navbar-styles.css">
+    <link rel="stylesheet" href="/css/footer-styles.css">
     <link rel="stylesheet" href="/css/hero-styles.css">
     <link rel="stylesheet" href="/css/mitglieder-styles.css">
     <link rel="stylesheet" href="/css/reisen-styles.css">
     <link rel="stylesheet" href="/css/verein-styles.css">
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm justify-content-center" id="mainNav">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarsExample11" expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-center d-lg-flex">
-                    <ul class="navbar-nav justify-content-lg-center">
-                        <li class="nav-item nav-item-left">
-                            <a class="nav-link " href="#section-Verein">Verein</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#section-Mitglieder">Mitglieder</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="#section-Reisen">Reisen</a>
-                        </li>
-                        <li class="nav-item nav-item-right">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
-                        <!-- <li class="nav-item dropdown nav-item-right">
-                            <a class="nav-link dropdown-toggle" href="#section-Reisen" data-bs-toggle="dropdown"
-                                aria-expanded="false">Reisen</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="reisen">Nizza 2017</a></li>
-                                <li><a class="dropdown-item" href="#">Dublin 2018</a></li>
-                                <li><a class="dropdown-item" href="#">Albanien 2019</a></li>
-                            </ul>
-                        </li> -->
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+<%- include("navbar") %>
