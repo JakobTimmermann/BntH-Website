@@ -1,10 +1,3 @@
-:root {
-  --primary-color: #6CD9CE;
-  --secondary-color: #D93BA1;
-  --complimentary-color: #2E2473;
-}
-
-
 @font-face {
     font-family: GaboFont;
     src: url("../gabo_font.otf") format("opentype");
@@ -71,7 +64,7 @@
     filter: invert(100%);
 }
 
-.shadows {
+/* .shadows {
     position: relative;
     text-transform: uppercase;
     text-shadow: -15px 5px 20px #ced0d3;
@@ -87,7 +80,7 @@
 .vereinsname:hover {
     text-shadow: -16px 6px 15px black;
     z-index: 3;
-}
+} */
 
 @keyframes slideIn {
   100% {

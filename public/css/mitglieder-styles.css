@@ -146,7 +146,7 @@
 }
 
 .mitglieder__name {
-    color: #e8eff4;
+    color: var(--primary-color); 
     font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -164,8 +164,8 @@
     font-weight: 600;
     text-transform: uppercase;
     color: transparent;
-    background: linear-gradient(270deg, rgb(67, 255, 0), rgb(0, 255, 247));
-    background: linear-gradient(270deg, #ffed00, #abd055);
+    background: linear-gradient(270deg, var(--complimentary-color), var(--secondary-color));
+    background: linear-gradient(270deg, var(--secondary-color), var(--complimentary-color));
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0.85;
@@ -331,10 +331,9 @@
 
 .mitglieder__bio {
     font-size: 1rem;
-    color: rgb(15, 98, 146);
+    color: var(--complimentary-color);
     font-weight: 500;
-    color: transparent;
-    background: linear-gradient(270deg, rgb(15, 98, 146), rgb(92, 126, 236));
+    /* background: linear-gradient(270deg, rgb(15, 98, 146), rgb(92, 126, 236)); */
     /* background: radial-gradient(ellipse at 0px 0px,
     rgb(255, 237, 74) 20%, 
     rgb(15, 98, 146) 50%); */

@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #FFED00;
+  --secondary-color: #D93BA1;
+  --complimentary-color: #0F6292;
+  --background-blue: #09486d;
+}
+
+
 body {
 	font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	background-color: #fff;
@@ -50,7 +58,7 @@ h6,
 
 a,
 a:hover {
-	color: #0F6292;
+	color: var(--complimentary-color);
 	text-decoration: none !important;
 	/* Smooth transition for anchor tag hover stuff  */
 	-webkit-transition: .3s all ease;
@@ -69,7 +77,82 @@ ul {
 .vereinsname {
 	position: absolute;
 	float: left;
-	color: #FFED00;
+    color: var(--primary-color);
+}
+
+
+body {
+	font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	background-color: #fff;
+	height: auto;
+	position: relative;
+}
+
+body:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	-webkit-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	transition: .3s all ease;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+}
+
+body.offcanvas-menu:before {
+	opacity: 1;
+	z-index: 1002;
+	visibility: visible;
+}
+
+p {
+	color: #b3b3b3;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h4,
+h5,
+h3,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: "Quicksand", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a,
+a:hover {
+	color: var(--complimentary-color); 
+	text-decoration: none !important;
+	/* Smooth transition for anchor tag hover stuff  */
+	-webkit-transition: .3s all ease;
+	-o-transition: .3s all ease;
+	transition: .3s all ease;
+}
+
+ul {
+	list-style: none;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.vereinsname {
+	position: absolute;
+	float: left;
+    color: var(--primary-color);
 	letter-spacing: .2em;
 	font-weight: 900;
 	padding: 25px 0;
@@ -109,7 +192,7 @@ ul {
 	text-shadow: none;
 	background-color: rgb(15, 98, 146);
 	border: solid 2px rgb(15, 98, 146);
-	color: #FFED00;
+    color: var(--primary-color);
 	font-weight: 900;
 	font-size: 17px;
 }
@@ -203,7 +286,7 @@ ul {
 
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a:focus,
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a:hover {
-		color: #FFED00;
+    	color: var(--primary-color);
 	}
 
 	#mainNav.nav-is-visible {
