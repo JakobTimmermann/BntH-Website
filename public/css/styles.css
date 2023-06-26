@@ -74,7 +74,7 @@ ul {
 	font-weight: 900;
 	padding: 25px 0;
 	margin-left: 5rem;
-	z-index: 2;
+	z-index: 1;
 	text-shadow: 4px 4px 6px rgba(15, 98, 146, 0.65);
 	font-size: calc(1rem + 3.5vw);
 }
