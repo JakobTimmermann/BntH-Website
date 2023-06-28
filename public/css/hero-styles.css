@@ -128,23 +128,23 @@
 
 @keyframes animatedBackground {
     0% {
-        background-position: calc(-60px - 5vw) center;
+        background-position: calc(-80px - 5vw + 2vh) center;
     }
 
     50% {
-        background-position: calc(-400px - 10vw) center;
+        background-position: calc(-100px - 12vw - 45vh) center;
     }
 
     100% {
-        background-position: calc(-60px - 5vw) center;
+        background-position: calc(-80px - 5vw + 2vh) center;
     }
 }
 
-@media (max-aspect-ratio: 7/9) {
+@media (max-aspect-ratio: 2/3) {
 
     .hero:after,
     .hero:before {
-        animation: animatedBackground 30s linear infinite;
+            animation: animatedBackground 30s linear infinite;
 
     }
 
