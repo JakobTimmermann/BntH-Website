@@ -47,7 +47,6 @@
     gap: calc(10px + 1.5vw);
     animation: 1.2s slideIn ease-in-out forwards 0.01s;
     transform: translateY(-600px);
-    /* animation: glow 3s ease-in-out infinite alternate; */
     animation-name:
         slideIn, glow;
     animation-duration:
@@ -79,13 +78,8 @@
         transform: scale(1.4, 2);
         opacity: 1;
     }
-}
-
-@keyframes slideIn {
-    100% {
-        transform: translateY(0px);
-        transform: scale(1.4, 2);
-        opacity: 1;
+    70% {
+        opacity: 0;
     }
 }
 
@@ -146,6 +140,7 @@
         margin-top: 66vh;
         z-index: 4;
         transform: translateY(600px);
+        opacity: 0;
     }
 
     #section-hero .vereinsname:before {
@@ -183,14 +178,14 @@
 }
 
 @keyframes glow {
-    0% {
+    16% {
         text-shadow: 4px 4px 6px rgba(15, 98, 146, 0.65);
     }
 
     50% {
         text-shadow: 1px 1px 25px rgba(52, 165, 230, 0.866);
     }
-    100% {
+    83% {
         text-shadow: 4px 4px 6px rgba(15, 98, 146, 0.65);
     }
 }
