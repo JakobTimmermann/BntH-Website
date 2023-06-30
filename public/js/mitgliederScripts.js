@@ -1,5 +1,15 @@
 // To have the active card always in the middle set shuffle to true 
-const shuffle = false;
+var shuffle = true;
+
+window.addEventListener("resize", function (event) {
+    if (window.innerWidth < 900 && shuffle === false) {
+        shuffle = true;
+        activateSlide($q(".carousel__item")[2])
+    } else if (window.innerWidth >= 900 && shuffle === true) {
+        shuffle = false;
+    }
+})
+
 const d = document;
 const $q = d.querySelectorAll.bind(d);
 const $g = d.querySelector.bind(d);
@@ -14,9 +24,11 @@ const getActiveIndex = () => {
     const $active = $g("[data-active]");
     return getSlideIndex($active);
 }
+
 const getSlideIndex = ($slide) => {
     return [...$q(".carousel__item")].indexOf($slide);
 }
+
 const prevSlide = (shuffle) => {
     const index = getActiveIndex();
     if (shuffle) {
@@ -29,6 +41,7 @@ const prevSlide = (shuffle) => {
         activateSlide($q(".carousel__item")[index - 1]);
     }
 }
+
 const prev2Slide = () => {
     const index = getActiveIndex();
     const $slides = $q(".carousel__item");
@@ -40,6 +53,7 @@ const prev2Slide = () => {
     $list.prepend($last);
     activateSlide($q(".carousel__item")[index]);
 }
+
 const nextSlide = () => {
     const index = getActiveIndex();
     if (shuffle) {
@@ -73,6 +87,7 @@ const chooseSlide = (e) => {
         $(".card").removeClass("active");
     }
     currentActiveIndex = index;
+    console.log(currentActiveIndex);
     if (shuffle) {
         if (index === 2) return;
         if (index === 4) next2Slide();
@@ -82,6 +97,7 @@ const chooseSlide = (e) => {
     }
     activateSlide($slide);
 }
+
 const activateSlide = ($slide) => {
     if (!$slide) return;
     const $slides = $q(".carousel__item");
@@ -89,26 +105,37 @@ const activateSlide = ($slide) => {
     $slide.setAttribute('data-active', true);
     $slide.focus();
 }
+
 const autoSlide = () => {
     nextSlide();
 }
+
 const pauseAuto = () => {
     clearInterval(auto);
     clearTimeout(pauser);
 }
+
 const handleNextClick = (e) => {
     pauseAuto();
     nextSlide(e);
 }
+
 const handlePrevClick = (e) => {
     pauseAuto();
     prevSlide(e);
 }
+
 const handleSlideClick = (e) => {
     pauseAuto();
     chooseSlide(e);
 }
+
 const handleSlideKey = (e) => {
+    if (window.innerWidth >= 900) {
+        shuffle = false;
+    } else {
+        shuffle = true;
+    }
     switch (e.keyCode) {
         case 37:
         case 65:
