@@ -73,30 +73,24 @@
     flex-grow: 0;
 }
 
-@media screen and (max-width: 800px) {
-    .carousel__item {
-        flex-basis: 15%;
-    }
-}
-
-/* @media screen and (max-width: 600px) {
-} */
-
-
 .carousel__item img {
     position: fixed;
     width: var(--width);
     height: 100%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     z-index: -1;
-    aspect-ratio: 2/3;
     object-fit: cover;
     filter: saturate(0.3) contrast(0.75) brightness(1.1);
 }
+
+.img-Basti {
+    transform: translate(-50%, -52%) scale(1.45) !important;
+}
+
 .cardContainer img {
-    left:30%;
+    left: 30%;
 }
 
 .carousel__item[data-active] img {
@@ -133,7 +127,7 @@
     flex-direction: column;
     justify-content: start;
     min-height: 200px;
-    padding: 1.8rem;
+    padding: calc(1rem + 1vw);
     z-index: 2;
     background-image: radial-gradient(ellipse at 0px 0px,
             rgba(15, 98, 146, 0.4) 20%,
@@ -146,8 +140,8 @@
 }
 
 .mitglieder__name {
-    color: var(--primary-color); 
-    font-size: 1.75rem;
+    color: var(--primary-color);
+    font-size: calc(0.5rem + 1.6vw);
     font-weight: 600;
     letter-spacing: 0.8px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
@@ -158,8 +152,7 @@
 }
 
 .mitglieder__titel {
-    font-size: 0.875rem;
-    font-size: 1rem;
+    font-size: calc(0.5rem + .5vw);
     letter-spacing: 1.25px;
     font-weight: 600;
     text-transform: uppercase;
@@ -171,7 +164,7 @@
     opacity: 0.85;
     text-wrap: balance;
     line-height: 1.1;
-    max-width: 18em;
+    max-width: 18rem;
     margin: 0 !important;
 }
 
@@ -183,37 +176,6 @@
     margin: 0 !important;
 }
 
-/* @media screen and (max-width: 800px) {
-    .carousel__item img {
-        width: calc(var(--width) * 0.5);
-    }
-
-    .carousel__contents {
-        transform: translateX(-100%) rotate(90deg);
-        transform-origin: bottom right;
-        align-items: end;
-        justify-content: end;
-        background-image: radial-gradient(ellipse at 100% 100%,
-                rgba(0, 0, 0, 0.4) 0%,
-                transparent 50%);
-        background-position: -100% 100%;
-        flex-direction: column;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        text-align: right;
-    }
-
-    [data-active] .carousel__contents {
-        background-position: 100% 100%;
-    }
-
-    .mitglieder__titel,
-    .mitglieder__name {
-        max-width: 70vh;
-        transform: translateX(200px);
-    }
-} */
 
 [data-active] .carousel__contents * {
     transform: translateX(0px);
@@ -341,13 +303,57 @@
     -webkit-background-clip: text;
     margin: 0rem 1rem 1rem 1rem;
 }
-/* Do I need this? */
-/* .card:hover:after {
-  opacity: 1;
-} */
 
-/* *,
-*:after,
-*:before {
-  box-sizing: border-box;
+
+
+@media screen and (max-width: 999px) {
+    .carousel__contents {
+        align-items: center;
+        text-align: center;
+        padding: calc(1rem + 1vw) 0;
+    }
+
+    .mitglieder__name {
+        text-align: center;
+        font-size: calc(0.5rem + 1.4vw);
+    }
+}
+
+@media screen and (max-width: 723px) {
+    .carousel__item img {
+        width: calc(var(--width) * 2);
+    }
+
+    .carousel__contents {
+        transform: translateX(-100%) rotate(90deg);
+        transform-origin: bottom right;
+        align-items: end;
+        justify-content: end;
+        background-image: radial-gradient(ellipse at 100% 100%,
+                rgba(0, 0, 0, 0.4) 0%,
+                transparent 50%);
+        background-position: -100% 100%;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: right;
+    }
+
+    [data-active] .carousel__contents {
+        background-position: 100% 100%;
+    }
+
+    .mitglieder__titel,
+    .mitglieder__name {
+        max-width: 70vh;
+        transform: translateX(200px);
+    }
+}
+
+
+/* @media screen and (max-width: 800px) {
+    .carousel__item {
+        flex-basis: 15%;
+    }
 } */

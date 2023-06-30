@@ -78,7 +78,7 @@
         transform: scale(1.4, 2);
         opacity: 1;
     }
-    70% {
+    50% {
         opacity: 0;
     }
 }
