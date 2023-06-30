@@ -69,6 +69,11 @@
     flex-basis: calc(var(--width) / 2);
     transition: all 0.3s ease;
 }
+.carousel__item:hover img {
+    left: 35%;
+    transition: all 0.3s ease;
+}
+
 
 .carousel__item[data-active] {
     flex-basis: var(--width);
@@ -81,7 +86,7 @@
     height: 100%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -48%) scale(1.12);
     z-index: -1;
     object-fit: cover;
     filter: saturate(0.3) contrast(0.75) brightness(1.1);
@@ -96,7 +101,7 @@
 }
 
 .carousel__item[data-active] img {
-    left: 50%;
+    left: 53%;
 }
 
 .carousel__item::after {
@@ -249,6 +254,7 @@
     transform: translateZ(40px);
 }
 
+
 .card .side {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -376,7 +382,7 @@
     }
 
     .img-Basti {
-        transform: translate(-40%, -52%) scale(1.45) !important;
+        transform: translate(-46%, -52%) scale(1.45) !important;
     }
 
     .carousel__contents {
@@ -421,7 +427,13 @@
     .card,
     .card:after,
     .card .side {
-        height: var(--height-mobile);
+        height: var(--height-mobile) !important;
+    }
+
+    .card,
+    .card .side.front,
+    .card .side.back {
+        width: var(--width-mobile);
     }
 }
 
@@ -433,6 +445,7 @@
     .card,
     .card:after,
     .card .side {
-        height: var(--height-mobile);
+        height: var(--height-mobile) !important;
     }
+
 }
