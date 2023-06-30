@@ -1,7 +1,7 @@
 :root {
     --height: calc(80vh - 20px);
     --width: 28vw;
-    --height-mobile: 60vh;
+    --height-mobile: 50vh;
     --width-mobile: 33vw;
 }
 
@@ -25,7 +25,7 @@
     display: flex;
     overflow: hidden;
     list-style: none;
-    padding: 3rem;
+    padding: calc(1rem + 3vw);
     padding-top: 2rem;
     margin: 0;
     contain: layout;
@@ -69,6 +69,7 @@
     flex-basis: calc(var(--width) / 2);
     transition: all 0.3s ease;
 }
+
 .carousel__item:hover img {
     left: 35%;
     transition: all 0.3s ease;
@@ -101,7 +102,7 @@
 }
 
 .carousel__item[data-active] img {
-    left: 53%;
+    left: 53% !important;
 }
 
 .carousel__item::after {
@@ -318,7 +319,7 @@
     .carousel__contents {
         align-items: center;
         text-align: center;
-        padding: calc(1rem + 1vw) 0;
+        padding: calc(1rem + 1vw) 10px;
     }
 
     .mitglieder__name {
@@ -373,16 +374,24 @@
         position: fixed;
         width: calc(var(--width) * 2);
         height: 100%;
-        left: 50%;
         top: 50%;
-        transform: translate(-45%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
         z-index: -1;
         object-fit: cover;
         filter: saturate(0.3) contrast(0.75) brightness(1.1);
     }
 
+    .cardContainer img {
+        left: 40%;
+    }
+
+    .carousel__item:hover img {
+        left: 42.5%;
+        transition: all 0.3s ease;
+    }
+
     .img-Basti {
-        transform: translate(-46%, -52%) scale(1.45) !important;
+        transform: translate(-45%, -52%) scale(1.45) !important;
     }
 
     .carousel__contents {

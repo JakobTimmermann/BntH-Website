@@ -1,11 +1,10 @@
 // To have the active card always in the middle set shuffle to true 
+var shuffle = false;
 if (window.innerWidth < 900 && shuffle === false) {
     shuffle = true;
-    activateSlide($q(".carousel__item")[2])
 } else if (window.innerWidth >= 900 && shuffle === true) {
     shuffle = false;
 }
-var shuffle = false;
 
 window.addEventListener("resize", function (event) {
     if (window.innerWidth < 900 && shuffle === false) {
