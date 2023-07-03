@@ -317,7 +317,7 @@
 .indicator-wrapper {
     display: flex;
     align-items: center;
-    width: 100vw;
+    width: auto;
     background: radial-gradient(farthest-corner at center center, rgba(217, 59, 162, 0.5) 30%, transparent 70%);
     /* backdrop-filter: blur(8px); */
     top: -8vh;
@@ -338,11 +338,14 @@
     background-size: cover;
     background-position: center center;
     opacity: 0.5;
+    transform: scale(1);
+    transition: opacity .25s ease-in-out, transform .25s ease-in-out;
 }
 
 .indicator-box[indicator-active] {
-    opacity: 1;
     transform: scale(1.5);
+    opacity: 1;
+    transition: opacity .25s ease-in-out, transform .25s ease-in-out;
 }
 
 .left-indicator-box {
