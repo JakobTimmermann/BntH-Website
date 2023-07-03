@@ -6,6 +6,8 @@ const $g = d.querySelector.bind(d);
 const $prev = $g(".prev");
 const $next = $g(".next");
 const $list = $g(".carousel__list");
+const $indicators = $q(".indicator-box");
+const $originalSlides = $q(".carousel__item");
 let auto;
 let pauser;
 let currentActiveIndex
@@ -105,6 +107,7 @@ const chooseSlide = (e) => {
 }
 
 const activateSlide = ($slide) => {
+    console.log(currentActiveIndex);
     if (!$slide) return;
     const $slides = $q(".carousel__item");
     $slides.forEach(el => el.removeAttribute('data-active'));
@@ -113,7 +116,6 @@ const activateSlide = ($slide) => {
 }
 
 const resetIndicator = () => {
-    const $indicators = $q(".indicator-box");
     $indicators.forEach(el => el.removeAttribute('indicator-active'));
     $indicators[2].setAttribute('indicator-active', true);
 }
@@ -140,6 +142,12 @@ const handlePrevClick = (e) => {
 const handleSlideClick = (e) => {
     pauseAuto();
     chooseSlide(e);
+}
+
+const handleIndicatorClick = (e) => {
+    console.log("Hello");
+    const $indicator = e.target.closest(".indicator-box");
+    console.log($indicator);
 }
 
 const handleSlideKey = (e) => {
@@ -169,6 +177,33 @@ $list.addEventListener("click", handleSlideClick);
 $list.addEventListener("focusin", handleSlideClick);
 $list.addEventListener("keyup", handleSlideKey);
 
+$indicators.forEach(indicator => {
+    indicator.addEventListener('click', function handleClick(event) {
+        const selectedIndex = [...$indicators].indexOf(indicator);
+        const indexDiff = [...$indicators].indexOf($g("[indicator-active]")) - 2;
+        $indicators.forEach(el => el.removeAttribute('indicator-active'));
+        $indicators[selectedIndex].setAttribute('indicator-active', true);
+
+        // const $slides = $q(".carousel__item");
+        // $slides.forEach(el => el.removeAttribute('data-active'));
+        
+        let translatedIndex = selectedIndex - indexDiff;
+        if (translatedIndex < 0) {
+            translatedIndex += 5;
+        } else if (translatedIndex > 4) {
+            translatedIndex -= 5;
+        }
+        if (shuffle) {
+            if (translatedIndex === 2) return;
+            if (translatedIndex === 4) next2Slide();
+            if (translatedIndex === 3) nextSlide(shuffle);
+            if (translatedIndex === 1) prevSlide(shuffle);
+            if (translatedIndex === 0) prev2Slide();
+        }
+        $q(".carousel__item")[2].setAttribute('data-active', true)
+    })
+});
+
 
 $list.addEventListener('touchstart', function (event) {
     touchstartX = event.changedTouches[0].screenX;
@@ -186,7 +221,6 @@ function handleGesture(e) {
     console.log(touchstartX);
     console.log(touchendX);
     if (Math.abs(touchendX - touchstartX) > 30) {
-        const $indicators = $q(".indicator-box");
         const $slides = $q(".carousel__item");
         if (touchendX < touchstartX) {
             const $first = $slides[0];
