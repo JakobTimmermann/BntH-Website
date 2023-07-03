@@ -28,7 +28,7 @@
     overflow: hidden;
     list-style: none;
     padding: calc(1rem + 3vw);
-    padding-top: 2rem;
+    padding-top: calc(0.5rem + 2vw);
     margin: 0;
     contain: layout;
     flex: 1;
@@ -314,7 +314,64 @@
     margin: 0rem 1rem 1rem 1rem;
 }
 
+.indicator-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    background: radial-gradient(farthest-corner at center center, rgba(217, 59, 162, 0.5) 30%, transparent 70%);
+    /* backdrop-filter: blur(8px); */
+    top: -8vh;
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 0;
+    justify-content: space-evenly;
+    visibility: hidden;
+}
 
+.indicator-box {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 100%;
+    z-index: 2;
+    margin: 10px 0;
+    border: 1px solid var(--secondary-color);
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.5;
+}
+
+.indicator-box[indicator-active] {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+.left-indicator-box {
+    margin-left: 5vw;
+}
+
+.right-indicator-box {
+    margin-right: 5vw;
+}
+
+.indicator-box.Manu {
+	background-image: url("/images/Manu.jpg");
+}
+
+.indicator-box.Jakob{
+	background-image: url("/images/Jakob.jpg");
+}
+
+.indicator-box.Sevi{
+	background-image: url("/images/Sevi.jpg");
+}
+
+.indicator-box.Lenz{
+	background-image: url("/images/Lenz.jpg");
+}
+
+.indicator-box.Basti{
+	background-image: url("/images/Basti.jpg");
+}
 
 @media screen and (max-width: 999px) {
     .carousel__contents {
@@ -421,9 +478,13 @@
 
 @media screen and (max-width: 723px) and (orientation: portrait) {
 
+    .indicator-wrapper {
+        visibility: visible; 
+    }
     .carousel__item[data-active] {
         flex-basis: var(--width-mobile);
         flex-grow: 0;
+        border-radius: 25px;
     }
 
     .carousel__item:nth-child(2),

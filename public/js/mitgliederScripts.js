@@ -1,20 +1,5 @@
 // To have the active card always in the middle set shuffle to true 
-var shuffle = false;
-if (window.innerWidth < 900 && shuffle === false) {
-    shuffle = true;
-} else if (window.innerWidth >= 900 && shuffle === true) {
-    shuffle = false;
-}
-
-window.addEventListener("resize", function (event) {
-    if (window.innerWidth < 900 && shuffle === false) {
-        shuffle = true;
-        activateSlide($q(".carousel__item")[2])
-    } else if (window.innerWidth >= 900 && shuffle === true) {
-        shuffle = false;
-    }
-})
-
+let shuffle = false;
 const d = document;
 const $q = d.querySelectorAll.bind(d);
 const $g = d.querySelector.bind(d);
@@ -25,10 +10,27 @@ let auto;
 let pauser;
 let currentActiveIndex
 
+if (window.innerWidth < 900 && shuffle === false) {
+    shuffle = true;
+} else if (window.innerWidth >= 900 && shuffle === true) {
+    shuffle = false;
+}
+
+window.addEventListener("resize", function (event) {
+    if (window.innerWidth < 900 && shuffle === false) {
+        activateSlide($q(".carousel__item")[2])
+        resetIndicator();
+        shuffle = true;
+    } else if (window.innerWidth >= 900 && shuffle === true) {
+        shuffle = false;
+    }
+})
+
 const getActiveIndex = () => {
     const $active = $g("[data-active]");
     return getSlideIndex($active);
 }
+
 
 const getSlideIndex = ($slide) => {
     return [...$q(".carousel__item")].indexOf($slide);
@@ -92,7 +94,6 @@ const chooseSlide = (e) => {
         $(".card").removeClass("active");
     }
     currentActiveIndex = index;
-    console.log(currentActiveIndex);
     if (shuffle) {
         if (index === 2) return;
         if (index === 4) next2Slide();
@@ -109,6 +110,12 @@ const activateSlide = ($slide) => {
     $slides.forEach(el => el.removeAttribute('data-active'));
     $slide.setAttribute('data-active', true);
     $slide.focus();
+}
+
+const resetIndicator = () => {
+    const $indicators = $q(".indicator-box");
+    $indicators.forEach(el => el.removeAttribute('indicator-active'));
+    $indicators[2].setAttribute('indicator-active', true);
 }
 
 const autoSlide = () => {
@@ -179,20 +186,30 @@ function handleGesture(e) {
     console.log(touchstartX);
     console.log(touchendX);
     if (Math.abs(touchendX - touchstartX) > 30) {
+        const $indicators = $q(".indicator-box");
+        const $slides = $q(".carousel__item");
         if (touchendX < touchstartX) {
-            const $slides = $q(".carousel__item");
             const $first = $slides[0];
             $first.remove();
             $list.append($first);
             activateSlide($q(".carousel__item")[2]);
+
+            const currentIndex = [...$indicators].indexOf($g("[indicator-active]"));
+            const newIndicatorIndex = (currentIndex + 1) % 5
+            $indicators.forEach(el => el.removeAttribute('indicator-active'));
+            $indicators[newIndicatorIndex].setAttribute('indicator-active', true);
         }
 
         if (touchendX > touchstartX) {
-            const $slides = $q(".carousel__item");
             const $last = $slides[$slides.length - 1];
             $last.remove();
             $list.prepend($last);
             activateSlide($q(".carousel__item")[2]);
+
+            const currentIndex = [...$indicators].indexOf($g("[indicator-active]"));
+            const newIndicatorIndex = (currentIndex - 1) % 5
+            $indicators.forEach(el => el.removeAttribute('indicator-active'));
+            $indicators[newIndicatorIndex].setAttribute('indicator-active', true);
         } else {}
     }
 
