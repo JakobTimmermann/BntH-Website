@@ -1,8 +1,10 @@
 :root {
     --height: calc(80vh - 20px);
     --width: 28vw;
-    --height-mobile: 50vh;
-    --width-mobile: 33vw;
+    --height-tablet: 50vh;
+    --width-tablet: 33vw;
+    --height-tablet: 50vh;
+    --width-mobile: 66vw;
 }
 
 .mitglieder-wrapper {
@@ -13,7 +15,7 @@
 
 #section-Mitglieder .vereinsname {
     margin: 0rem;
-    padding-top: 4rem;
+    padding-top: calc(1rem + 1vw);
     padding-bottom: 0;
     z-index: 2;
     position: static !important;
@@ -275,34 +277,33 @@
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-around;
+    align-items: center;
     padding: 1.7rem;
     background-image: radial-gradient(ellipse at 0px 0px,
             rgba(15, 98, 146, 0.5) 20%,
             rgba(247, 192, 74, 0.2) 80%);
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.1;
 }
 
 .back .mitglieder__titel,
 .back .mitglieder__name {
-    transition-duration: 1.5 s;
-    max-width: none;
-    line-height: 1.5;
+    transition-duration: 1.5s;
+    /* max-width: none; */
 }
 
 .mitglieder__zitat {
     color: black;
-    margin: 1rem 1rem;
-    font-size: 0.875rem;
-    font-size: 1rem;
+    margin: 1rem 0rem;
+    font-size: calc(0.66rem + 0.33vw);
     font-style: italic;
 
 }
 
 .mitglieder__bio {
-    font-size: 1rem;
     color: var(--complimentary-color);
+    font-size: calc(0.66rem + 0.33vw);
     font-weight: 500;
     /* background: linear-gradient(270deg, rgb(15, 98, 146), rgb(92, 126, 236)); */
     /* background: radial-gradient(ellipse at 0px 0px,
@@ -327,46 +328,6 @@
         font-size: calc(0.5rem + 1.4vw);
     }
 }
-
-/* @media screen and (max-width: 723px) {
-    .carousel__item img {
-        width: calc(var(--width) * 2);
-    }
-
-    .carousel__contents {
-        transform: translateX(-100%) rotate(90deg);
-        transform-origin: bottom right;
-        align-items: end;
-        justify-content: end;
-        background-image: radial-gradient(ellipse at 100% 100%,
-                rgba(0, 0, 0, 0.4) 0%,
-                transparent 50%);
-        background-position: -100% 100%;
-        flex-direction: column;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        text-align: right;
-    }
-
-    [data-active] .carousel__contents {
-        background-position: 100% 100%;
-    }
-
-    .mitglieder__titel,
-    .mitglieder__name {
-        max-width: 70vh;
-        transform: translateX(200px);
-    }
-} */
-
-
-/* @media screen and (max-width: 800px) {
-    .carousel__item {
-        flex-basis: 15%;
-    }
-} */
-
 
 @media screen and (max-width: 900px) {
 
@@ -394,8 +355,9 @@
         transform: translate(-45%, -52%) scale(1.45) !important;
     }
 
+    .side.back,
     .carousel__contents {
-        width: var(--width-mobile);
+        width: var(--width-tablet);
         padding: calc(1rem + 1vw);
     }
 
@@ -404,21 +366,19 @@
     }
 
     .carousel__item {
-        flex-basis: calc(var(--width-mobile)/2);
+        flex-basis: calc(var(--width-tablet)/2);
         margin: 0 5px;
-        border-radius: 8px;
         font-size: 3vw;
     }
 
     .carousel__item:hover {
-        flex-basis: calc(var(--width-mobile)/1.6666);
+        flex-basis: calc(var(--width-tablet)/1.6666);
         margin: 0 5px;
-        border-radius: 8px;
         font-size: 3vw;
     }
 
     .carousel__item[data-active] {
-        flex-basis: var(--width-mobile);
+        flex-basis: var(--width-tablet);
         flex-grow: 0;
     }
 
@@ -436,13 +396,13 @@
     .card,
     .card:after,
     .card .side {
-        height: var(--height-mobile) !important;
+        height: var(--height-tablet) !important;
     }
 
     .card,
     .card .side.front,
     .card .side.back {
-        width: var(--width-mobile);
+        width: var(--width-tablet);
     }
 }
 
@@ -454,7 +414,72 @@
     .card,
     .card:after,
     .card .side {
-        height: var(--height-mobile) !important;
+        height: var(--height-tablet) !important;
+    }
+
+}
+
+@media screen and (max-width: 723px) and (orientation: portrait) {
+
+    .carousel__item[data-active] {
+        flex-basis: var(--width-mobile);
+        flex-grow: 0;
+    }
+
+    .carousel__item:nth-child(2),
+    .carousel__item:nth-child(4) {
+        flex: 0 0 0px;
+        margin: 0;
+        box-shadow: none;
+        opacity: 0 !important;
+    }
+
+    .carousel__list {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .side.back,
+    .carousel__contents {
+        width: var(--width-mobile);
+        padding: calc(1rem + 1vw);
+    }
+
+    .card,
+    .card .side.front,
+    .card .side.back {
+        width: var(--width-mobile);
+    }
+
+    .carousel__item img {
+        width: var(--width-mobile);
+        height: 100%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1.1);
+        z-index: -1;
+        object-fit: cover;
+        filter: saturate(0.3) contrast(0.75) brightness(1.1);
+    }
+
+    .mitglieder__titel {
+        max-width: 50vw;
+    }
+
+    .img-Basti {
+        transform: translate(-53%, -50%) scale(1.45) !important;
+    }
+
+    .mitglieder__name {
+        text-align: center;
+        font-size: calc(0.75rem + 1.6vw);
+    }
+
+    .mitglieder__titel {
+        font-size: calc(0.5rem + .5vw);
+    }
+
+    .side.back {
+        padding: calc(2rem + 1vw);
     }
 
 }

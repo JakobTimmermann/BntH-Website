@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #FFED00;
-  --secondary-color: #D93BA1;
-  --complimentary-color: #0F6292;
-  --background-blue: #09486d;
+	--primary-color: #FFED00;
+	--secondary-color: #D93BA1;
+	--complimentary-color: #0F6292;
+	--background-blue: #09486d;
 }
 
 
@@ -86,7 +86,7 @@ ul {
 .vereinsname {
 	position: absolute;
 	float: left;
-    color: var(--primary-color);
+	color: var(--primary-color);
 	letter-spacing: .2em;
 	font-weight: 900;
 	padding: 25px 0;
@@ -100,7 +100,6 @@ ul {
 	font-size: 2rem;
 	text-shadow: 2.5px 2.5px 4px rgba(15, 98, 146, 0.65);
 }
-
 
 .button {
 	text-transform: uppercase;
@@ -122,15 +121,26 @@ ul {
 	font-size: calc(0.8rem + 0.2vw);
 }
 
-.button:hover {
-	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-	text-shadow: none;
-	background-color: rgb(15, 98, 146);
-	border: solid 2px rgb(15, 98, 146);
-    color: var(--primary-color);
-	font-weight: 900;
-	font-size: calc(0.85rem + 0.22vw);
+/* 
+TODO: Remove hover for mobile phones with @media (hover: none) {} query
+TODO: Find alternative "mobile animation" for buttons 
+*/
+@media (hover: hover) {
+	.button:hover {
+		box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+		text-shadow: none;
+		background-color: rgb(15, 98, 146);
+		border: solid 2px rgb(15, 98, 146);
+		color: var(--primary-color);
+		font-weight: 900;
+		font-size: calc(0.85rem + 0.22vw);
+	}
 }
+
+@media (hover: none) {
+	.button {border-radius: 50px;}
+}
+
 
 @media (max-width: 991.98px) {
 	header .navbar .dropdown-menu:before {
@@ -221,7 +231,7 @@ ul {
 
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a:focus,
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a:hover {
-    	color: var(--primary-color);
+		color: var(--primary-color);
 	}
 
 	#mainNav.nav-is-visible {

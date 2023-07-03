@@ -110,7 +110,6 @@
     bottom: 34%;
     left: 20%;
     /* animation: 1s underline ease-in-out both 1.1s; */
-    /* TODO Alternate Animation Backwards and forward for mobile screen */
     animation: 6s underline ease-in-out both infinite ;
     mix-blend-mode: hue;
     z-index: 1000;

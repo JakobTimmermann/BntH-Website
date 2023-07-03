@@ -161,3 +161,42 @@ const startAuto = () => {
 $list.addEventListener("click", handleSlideClick);
 $list.addEventListener("focusin", handleSlideClick);
 $list.addEventListener("keyup", handleSlideKey);
+
+
+$list.addEventListener('touchstart', function (event) {
+    touchstartX = event.changedTouches[0].screenX;
+    touchstartY = event.changedTouches[0].screenY;
+}, false);
+
+$list.addEventListener('touchend', function (event) {
+    touchendX = event.changedTouches[0].screenX;
+    touchendY = event.changedTouches[0].screenY;
+    handleGesture(event);
+}, false);
+
+
+function handleGesture(e) {
+    console.log(touchstartX);
+    console.log(touchendX);
+    if (Math.abs(touchendX - touchstartX) > 30) {
+        if (touchendX < touchstartX) {
+            const $slides = $q(".carousel__item");
+            const $first = $slides[0];
+            $first.remove();
+            $list.append($first);
+            activateSlide($q(".carousel__item")[2]);
+        }
+
+        if (touchendX > touchstartX) {
+            const $slides = $q(".carousel__item");
+            const $last = $slides[$slides.length - 1];
+            $last.remove();
+            $list.prepend($last);
+            activateSlide($q(".carousel__item")[2]);
+        } else {}
+    }
+
+    if (touchendX === touchstartX) {
+        console.log('Tap');
+    }
+}
