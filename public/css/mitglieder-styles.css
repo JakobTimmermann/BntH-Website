@@ -1,10 +1,9 @@
 :root {
-    --height: calc(80vh - 20px);
-    --width: 28vw;
-    --height-tablet: 50vh;
-    --width-tablet: 33vw;
-    --height-tablet: 50vh;
-    --width-mobile: 66vw;
+    --height-Mitglieder: calc(80vh - 20px);
+    --width-Mitglieder: 28vw;
+    --height-Mitglieder-tablet: 50vh;
+    --width-Mitglieder-tablet: 33vw;
+    --width-Mitglieder-mobile: 66vw;
 }
 
 .mitglieder-wrapper {
@@ -41,7 +40,7 @@
     margin: 0 10px;
     padding: 0;
     flex: 1 1 10%;
-    height: var(--height);
+    height: var(--height-Mitglieder);
     overflow: hidden;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
@@ -63,12 +62,12 @@
 .cardContainer,
 .carousel__box,
 .carousel__contents {
-    width: var(--width);
+    width: var(--width-Mitglieder);
     height: auto;
 }
 
 .carousel__item:hover {
-    flex-basis: calc(var(--width) / 2);
+    flex-basis: calc(var(--width-Mitglieder) / 2);
     transition: all 0.3s ease;
 }
 
@@ -79,13 +78,13 @@
 
 
 .carousel__item[data-active] {
-    flex-basis: var(--width);
+    flex-basis: var(--width-Mitglieder);
     flex-grow: 0;
 }
 
 .carousel__item img {
     position: fixed;
-    width: var(--width);
+    width: var(--width-Mitglieder);
     height: 100%;
     left: 50%;
     top: 50%;
@@ -162,7 +161,7 @@
 }
 
 .mitglieder__titel {
-    font-size: calc(0.5rem + .5vw);
+    font-size: calc(0.5rem + .75vw);
     letter-spacing: 1.25px;
     font-weight: 600;
     text-transform: uppercase;
@@ -225,15 +224,15 @@
 
 .cardContainer {
     position: relative;
-    width: var(--width);
-    height: var(--height);
+    width: var(--width-Mitglieder);
+    height: var(--height-Mitglieder);
     perspective: 999px;
 }
 
 .card {
     display: inline-block;
-    width: var(--width);
-    height: var(--height);
+    width: var(--width-Mitglieder);
+    height: var(--height-Mitglieder);
     cursor: pointer;
     -moz-backface-visibility: hidden;
     transform-style: preserve-3d;
@@ -245,8 +244,8 @@
     content: '';
     position: absolute;
     z-index: -1;
-    width: var(--width);
-    height: var(--height);
+    width: var(--width-Mitglieder);
+    height: var(--height-Mitglieder);
     border-radius: 5px;
     box-shadow: 0 14px 50px -4px rgba(0, 0, 0, 0.15);
     opacity: 0;
@@ -263,8 +262,8 @@
     backface-visibility: hidden;
     position: absolute;
     flex-direction: column;
-    width: var(--width);
-    height: var(--height);
+    width: var(--width-Mitglieder);
+    height: var(--height-Mitglieder);
     background-color: white;
 }
 
@@ -279,7 +278,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 1.7rem;
+    padding: calc(1rem + 2vw);
     background-image: radial-gradient(ellipse at 0px 0px,
             rgba(15, 98, 146, 0.5) 20%,
             rgba(247, 192, 74, 0.2) 80%);
@@ -296,14 +295,14 @@
 .mitglieder__zitat {
     color: black;
     margin: 1rem 0rem;
-    font-size: calc(0.66rem + 0.33vw);
+    font-size: calc(0.5rem + 0.75vw + 0.5vh);
     font-style: italic;
 
 }
 
 .mitglieder__bio {
     color: var(--complimentary-color);
-    font-size: calc(0.66rem + 0.33vw);
+    font-size: calc(0.5rem + 0.66vw + 0.33  vh);
     font-weight: 500;
     /* background: linear-gradient(270deg, rgb(15, 98, 146), rgb(92, 126, 236)); */
     /* background: radial-gradient(ellipse at 0px 0px,
@@ -326,7 +325,7 @@
     margin-bottom: 0;
     justify-content: space-evenly;
     visibility: hidden;
-    position:absolute;
+    position: absolute;
 }
 
 .indicator-box {
@@ -358,23 +357,23 @@
 }
 
 .indicator-box.Manu {
-	background-image: url("/images/Manu.jpg");
+    background-image: url("/images/Manu.jpg");
 }
 
-.indicator-box.Jakob{
-	background-image: url("/images/Jakob.jpg");
+.indicator-box.Jakob {
+    background-image: url("/images/Jakob.jpg");
 }
 
-.indicator-box.Sevi{
-	background-image: url("/images/Sevi.jpg");
+.indicator-box.Sevi {
+    background-image: url("/images/Sevi.jpg");
 }
 
-.indicator-box.Lenz{
-	background-image: url("/images/Lenz.jpg");
+.indicator-box.Lenz {
+    background-image: url("/images/Lenz.jpg");
 }
 
-.indicator-box.Basti{
-	background-image: url("/images/Basti.jpg");
+.indicator-box.Basti {
+    background-image: url("/images/Basti.jpg");
 }
 
 @media screen and (max-width: 999px) {
@@ -394,7 +393,7 @@
 
     .carousel__item img {
         position: fixed;
-        width: calc(var(--width) * 2);
+        width: calc(var(--width-Mitglieder) * 2);
         height: 100%;
         top: 50%;
         transform: translate(-50%, -50%) scale(1);
@@ -418,7 +417,7 @@
 
     .side.back,
     .carousel__contents {
-        width: var(--width-tablet);
+        width: var(--width-Mitglieder-tablet);
         padding: calc(1rem + 1vw);
     }
 
@@ -427,19 +426,19 @@
     }
 
     .carousel__item {
-        flex-basis: calc(var(--width-tablet)/2);
+        flex-basis: calc(var(--width-Mitglieder-tablet)/2);
         margin: 0 5px;
         font-size: 3vw;
     }
 
     .carousel__item:hover {
-        flex-basis: calc(var(--width-tablet)/1.6666);
+        flex-basis: calc(var(--width-Mitglieder-tablet)/1.6666);
         margin: 0 5px;
         font-size: 3vw;
     }
 
     .carousel__item[data-active] {
-        flex-basis: var(--width-tablet);
+        flex-basis: var(--width-Mitglieder-tablet);
         flex-grow: 0;
     }
 
@@ -457,13 +456,13 @@
     .card,
     .card:after,
     .card .side {
-        height: var(--height-tablet) !important;
+        height: var(--height-Mitglieder-tablet) !important;
     }
 
     .card,
     .card .side.front,
     .card .side.back {
-        width: var(--width-tablet);
+        width: var(--width-Mitglieder-tablet);
     }
 }
 
@@ -475,7 +474,7 @@
     .card,
     .card:after,
     .card .side {
-        height: var(--height-tablet) !important;
+        height: var(--height-Mitglieder-tablet) !important;
     }
 
 }
@@ -483,11 +482,12 @@
 @media screen and (max-width: 723px) and (orientation: portrait) {
 
     .indicator-wrapper {
-        visibility: visible; 
+        visibility: visible;
         position: relative;
     }
+
     .carousel__item[data-active] {
-        flex-basis: var(--width-mobile);
+        flex-basis: var(--width-Mitglieder-mobile);
         flex-grow: 0;
         border-radius: 25px;
     }
@@ -507,18 +507,18 @@
 
     .side.back,
     .carousel__contents {
-        width: var(--width-mobile);
+        width: var(--width-Mitglieder-mobile);
         padding: calc(1rem + 1vw);
     }
 
     .card,
     .card .side.front,
     .card .side.back {
-        width: var(--width-mobile);
+        width: var(--width-Mitglieder-mobile);
     }
 
     .carousel__item img {
-        width: var(--width-mobile);
+        width: var(--width-Mitglieder-mobile);
         height: 100%;
         top: 50%;
         transform: translate(-50%, -50%) scale(1.1);
@@ -537,15 +537,16 @@
 
     .mitglieder__name {
         text-align: center;
-        font-size: calc(0.75rem + 1.6vw);
+        font-size: calc(1rem + 1.6vw);
     }
 
     .mitglieder__titel {
-        font-size: calc(0.5rem + .5vw);
+        font-size: calc(0.66rem + 0.75vw);
     }
 
     .side.back {
-        padding: calc(2rem + 1vw);
+        padding: calc(1.66rem + 1vw);
+        padding-bottom:  calc(2.5rem + 1.25vw)
     }
 
 }
