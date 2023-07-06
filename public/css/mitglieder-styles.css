@@ -326,6 +326,7 @@
     margin-bottom: 0;
     justify-content: space-evenly;
     visibility: hidden;
+    position:absolute;
 }
 
 .indicator-box {
@@ -483,6 +484,7 @@
 
     .indicator-wrapper {
         visibility: visible; 
+        position: relative;
     }
     .carousel__item[data-active] {
         flex-basis: var(--width-mobile);
