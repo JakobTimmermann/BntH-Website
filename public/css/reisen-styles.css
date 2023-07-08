@@ -1,3 +1,10 @@
+:root {
+	--height-Reisen: 100vh;
+	--height-Reisen-mobile: 66vh;
+	/* --width-mobile: 66vw; */
+}
+
+
 .container-header {
 	display: flex;
 	justify-content: right;
@@ -13,14 +20,14 @@
 	justify-content: center;
 	align-items: center;
 	align-content: stretch;
-	height: 100vh;
+	height: var(--height-Reisen);
 	width: 100%;
 	margin: 0 auto;
 	background-color: wheat;
 }
 
 .u-a5 {
-	font-size: 30px;
+	font-size: calc(1rem + 1.25vw);
 	line-height: 35px;
 	letter-spacing: 5px;
 	text-transform: uppercase;
@@ -54,7 +61,7 @@
 	/* This determines the height of the Reise Carousel */
 	/* However values below 100% also lead to weird padding behavior */
 	/* The solution is vh! */
-	padding-bottom: 100vh;
+	padding-bottom: var(--height-Reisen);
 	/* try and error */
 }
 
@@ -64,7 +71,7 @@
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 100vh;
+	height: var(--height-Reisen);
 	background-image: radial-gradient(circle at 49% 50%, rgba(246, 246, 240, 0.3), rgba(236, 230, 147, 0.1));
 }
 
@@ -74,7 +81,7 @@
 }
 
 .c-mouse-vertical-carousel__list {
-	width: 100%;
+	width: 100vw;
 	position: absolute;
 	left: 0;
 	/* Shift carousel to the top */
@@ -86,30 +93,29 @@
 	display: block;
 	padding-bottom: 20px;
 	padding-top: 20px;
-	margin-right: 66.1666666667%;
+	margin-right: 60%;
 	padding-left: 10%;
 }
 
 .emphasize a,
 .emphasize p {
-	-webkit-transition: .3s all ease;
-	-o-transition: .3s all ease;
-	transition: .3s all ease;
+	transition: .5s all ease;
 	-webkit-transform: scale(1.2);
 }
 
 .c-mouse-vertical-carousel__list .emphasize a {
-	margin-left: 5%;
+	margin-left: 7%;
 }
 
 .c-mouse-vertical-carousel__list .emphasize .u-a5 {
 	text-shadow: 2px 2px 4px rgba(20, 50, 67, 0.9);
 }
+
 .c-mouse-vertical-carousel__eyebrow {
 	position: relative;
 	padding-bottom: 8px;
 	padding-top: 3px;
-	font-size: 17px;
+	font-size: calc(0.75rem + 0.4vw);
 }
 
 .c-mouse-vertical-carousel__eyebrow span {
@@ -127,14 +133,15 @@
 	top: 0;
 	left: 0px;
 	width: 100%;
-	height: 100vh;
+	height: var(--height-Reisen);
 	will-change: transform;
 	background-repeat: no-repeat;
 	background-size: cover;
+	/* animation: animatedBackground 30s linear infinite; */
 }
 
 .c-span-small {
-	font-size: 12px;
+	font-size: calc(0.5rem + 0.33vw);
 	text-shadow: 1px 1px 3px rgba(20, 50, 67, 0.9);
 }
 
@@ -181,4 +188,23 @@
 	opacity: 0;
 	transform: matrix(1.05, 0, 0, 1.05, 0, 0);
 	background-position: 50% 50%;
+}
+
+@media screen and (max-width: 723px) and (orientation: portrait) {
+
+	.container-Reisen,
+	.c-gradient-overlay,
+	.c-mouse-vertical-carousel__bg-img {
+		height: var(--height-Reisen-mobile);
+	}
+
+	.u-media-wrapper.u-media-wrapper--16-9 {
+		padding-bottom: var(--height-Reisen-mobile);
+	}
+}
+
+@media (hover: none) {
+	.c-mouse-vertical-carousel__list {
+		visibility: hidden;
+	}
 }
