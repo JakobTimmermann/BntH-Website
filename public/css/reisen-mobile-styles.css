@@ -1,0 +1,12 @@
+.timeline-carousel__content {
+    height: 60vh;
+}
+
+.timeline-carousel__content:before{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
