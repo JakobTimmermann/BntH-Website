@@ -186,7 +186,7 @@ $indicators.forEach(indicator => {
 
         // const $slides = $q(".carousel__item");
         // $slides.forEach(el => el.removeAttribute('data-active'));
-        
+
         let translatedIndex = selectedIndex - indexDiff;
         if (translatedIndex < 0) {
             translatedIndex += 5;
@@ -241,7 +241,11 @@ function handleGesture(e) {
             activateSlide($q(".carousel__item")[2]);
 
             const currentIndex = [...$indicators].indexOf($g("[indicator-active]"));
-            const newIndicatorIndex = (currentIndex - 1) % 5
+            let newIndicatorIndex = (currentIndex - 1) % 5
+            if (newIndicatorIndex< 0) {
+                newIndicatorIndex += 5;
+            }
+            console.log(newIndicatorIndex);
             $indicators.forEach(el => el.removeAttribute('indicator-active'));
             $indicators[newIndicatorIndex].setAttribute('indicator-active', true);
         } else {}
