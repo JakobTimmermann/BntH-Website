@@ -8,19 +8,19 @@ function carousel() {
   $.js('timeline-carousel').slick({
     infinite: false,
     arrows: false,
-    dots: true,
+    dots: false,
     autoplay: false,
-    speed: 1100,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }]
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // responsive: [
+    //   {
+    //     breakpoint: 800,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1
+    //     }
+    //   }]
   });
 }
 

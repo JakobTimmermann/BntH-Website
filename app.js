@@ -1,5 +1,6 @@
 import express from 'express';
 import _ from "lodash";
+// Module to detect mobile devices
 import useragent from 'express-useragent';
 
 const app = express();
@@ -10,12 +11,44 @@ app.use(express.urlencoded({
     extended: true
 })); // Necessary to tap into data recieved via html form
 app.use(express.static("public")); // Upload static files in public folder!
-app.use(useragent.express());
+app.use(useragent.express()); // See above
+
+
+let reisen = [{
+        year: "2017",
+        city: "Nizza",
+        country: "Frankreich",
+        andMore: false,
+        motto: "Rolling Stones",
+        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor incididunt ut ...",
+        thumbnail: 'images/Reisen/2017_Nizza/thumbnail.jpeg',
+    },
+    {
+        year: "2018",
+        city: "Dublin",
+        country: "Irland",
+        andMore: true,
+        motto: "Irish Stew",
+        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor incididunt ut ...",
+        thumbnail: 'images/Reisen/2018_Dublin/thumbnail.jpeg',
+    },
+    {
+        year: "2019",
+        city: "Tirana",
+        country: "Albanien",
+        andMore: true,
+        motto: "Blutrache",
+        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor incididunt ut ...",
+        thumbnail: 'images/Reisen/2019_Albanien/thumbnail.jpg',
+    },
+]
+
 
 app.get("/", async (req, res) => {
-    const isMobile = req.useragent.isMobile;
+    const isMobile = req.useragent.isMobile; // Detects Mobile Phones
     res.render("index", {
-        isMobile: isMobile 
+        isMobile: isMobile,
+        reisen: reisen
     });
 });
 

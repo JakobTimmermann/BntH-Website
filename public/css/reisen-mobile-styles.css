@@ -1,7 +1,3 @@
-.timeline-carousel__content {
-    height: 60vh;
-}
-
 .timeline-carousel__content:before{
     content: ' ';
     width: 100%;
@@ -9,4 +5,51 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+.reise-content {
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10vw;
+    padding-top: 5vw;
+}
+.reiseInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.reiseReadMore {
+    float: right;
+    color: var(--primary-color)
+}
+
+.reiseDescription {
+    font-size: calc(1rem + 0.5vw);
+    margin: 0;
+    color: transparent;
+    background: linear-gradient(270deg, var(--secondary-color), var(--complimentary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+    font-weight: 600;
+}
+
+.reiseJahr {
+    color: var(--secondary-color);
+    font-size: calc(1rem + 0.75vw);
+    font-weight: 600;
+    text-shadow: 2px 2px 3px rgba(15, 98, 146, 0.65);
+    padding-left: 2vw;
+}
+
+.reiseDestination {
+    color: var(--primary-color);
+	text-shadow: 4px 4px 6px rgba(15, 98, 146, 0.65);
+	font-size: calc(1rem + 3.5vw);
+    font-weight: 800;
 }

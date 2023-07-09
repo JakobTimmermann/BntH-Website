@@ -16,13 +16,13 @@
 </section>
 
 
+<% if (isMobile) { %>
+<%- include("partials/reisen-mobile") %>
+<% } else {%>
 <section id="section-Reisen">
-    <% if (isMobile) { %>
-    <%- include("partials/reisen-mobile") %>
-    <% } else {%>
     <%- include("partials/reisen") %>
-    <% } %>
 </section>
+<% } %>
 
 
 <%- include("partials/footer") %>
