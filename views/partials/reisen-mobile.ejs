@@ -4,15 +4,18 @@
         <!--Timeline item-->
         <% for (reise of reisen) { %>
         <div class="timeline-carousel__item">
-            <div class="reise-content" style="background: url(<%=reise.thumbnail%>);">
+            <div class="reise-content" style="background-image: url(<%=reise.thumbnail%>);">
+            <!-- <div class="reise-content"> -->
                 <div class="reiseInfo">
                     <span class="reiseDestination"><%= reise.city %> - <%= reise.country %></span>
                     <span class="reiseJahr"><%= reise.year %></span>
                 </div>
-                <p class="reiseDescription">
-                    <%= reise.description%>
-                    <a href="#" class="reiseReadMore">Mehr dazu</a>
-                </p>
+                <div class="reiseDescriptionWrapper">
+                    <p class="reiseDescription">
+                        <%= reise.description%>
+                        <a href="#" class="reiseReadMore">Mehr dazu</a>
+                    </p>
+                </div>
             </div>
         </div>
         <% } %>

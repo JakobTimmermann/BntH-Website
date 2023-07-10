@@ -9,10 +9,13 @@ function carousel() {
     infinite: false,
     arrows: false,
     dots: false,
-    autoplay: false,
+    autoplay: true,
     speed: 2000,
+    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    cssEase: 'ease-in-out',
+    touchThreshold: 5,
     // responsive: [
     //   {
     //     breakpoint: 800,
