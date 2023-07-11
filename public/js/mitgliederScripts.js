@@ -186,7 +186,6 @@ $indicators.forEach(indicator => {
 
         // const $slides = $q(".carousel__item");
         // $slides.forEach(el => el.removeAttribute('data-active'));
-
         let translatedIndex = selectedIndex - indexDiff;
         if (translatedIndex < 0) {
             translatedIndex += 5;

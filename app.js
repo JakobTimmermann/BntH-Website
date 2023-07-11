@@ -29,7 +29,7 @@ let reisen = [{
         country: "Irland",
         andMore: true,
         motto: "Irish Stew",
-        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor ut ...",
+        description: "Nunc consequat interdum varius sit amet mattis vulputate enim nulla ...",
         thumbnail: 'images/Reisen/2018_Dublin/thumbnail.jpeg',
     },
     {
@@ -38,8 +38,8 @@ let reisen = [{
         country: "Albanien",
         andMore: true,
         motto: "Blutrache",
-        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor ut ...",
-        thumbnail: 'images/Reisen/2020_Schweiz/thumbnail.jpg',
+        description: "Ornare quam viverra orci sagittis eu volutpat. Nam libero justo laoreet sit ...",
+        thumbnail: 'images/Reisen/2020_Schweiz/thumbnail_flipped.jpg',
     },
 ]
 
