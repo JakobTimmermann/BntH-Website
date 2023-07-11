@@ -53,13 +53,13 @@
     flex-direction: column;
 }
 
-.reiseReadMore {
+/* .reiseReadMore {
     float: right;
     color: var(--primary-color);
     padding: 1vw;
     padding-right: 5vw;
-}
-
+} */
+.reiseReadMore,
 .reiseDescription {
     font-size: calc(1rem + 0.5vw);
     margin: 0;
@@ -89,17 +89,19 @@
 }
 
 .reiseDescriptionWrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     position: relative;
     padding: 0 !important;
-    margin: 10vw 30vw 0vw 0vw;
     border-radius: 0px;
     border-top-right-radius: 15px;
     background-color: rgb(240, 248, 255, 0.9);
     z-index: 1;
     opacity: 1;
+    width: 33vw;
+    transform: translate(-35vw);
+}
+.slick-active .reiseDescriptionWrapper {
+    animation: buttonAnimation 0.35s 1 ease-in-out forwards;
+    animation-delay: 0.15s;
 }
 
 .slick-active .timeline-carousel__item::after{
@@ -139,5 +141,15 @@
   }
   to {
     -webkit-transform: scale(1.2); 
+  }
+}
+
+
+@keyframes buttonAnimation {
+  from {
+    -webkit-transform: translate(-34vw, 34vw); 
+  }
+  to {
+    -webkit-transform: translate(0vw, 0vw); 
   }
 }

@@ -9,7 +9,7 @@ function carousel() {
     infinite: false,
     arrows: false,
     dots: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
     speed: 1000,
     fade: true,

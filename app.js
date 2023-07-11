@@ -39,10 +39,36 @@ let reisen = [{
         andMore: true,
         motto: "Blutrache",
         description: "Ornare quam viverra orci sagittis eu volutpat. Nam libero justo laoreet sit ...",
+        thumbnail: 'images/Reisen/2019_Albanien/thumbnail_alternativ.jpg',
+    },
+    {
+        year: "2020",
+        city: "Tessin",
+        country: "Schweiz",
+        andMore: true,
+        motto: "Blutrache",
+        description: "Nunc consequat interdum varius sit amet mattis vulputate enim nulla ...",
         thumbnail: 'images/Reisen/2020_Schweiz/thumbnail_flipped.jpg',
     },
+    {
+        year: "2021",
+        city: "Split",
+        country: "Kroatien",
+        andMore: true,
+        motto: "Grenzen auf",
+        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor ut ...",
+        thumbnail: 'images/Reisen/2021_Kroatien/thumbnail.jpg',
+    },
+    {
+        year: "2022",
+        city: "Kitzbühl",
+        country: "Österreich",
+        andMore: true,
+        motto: "",
+        description: "Nunc consequat interdum varius sit amet mattis vulputate enim nulla ...",
+        thumbnail: 'images/Reisen/2022_Österreich/thumbnail.jpg',
+    },
 ]
-
 
 app.get("/", async (req, res) => {
     const isMobile = req.useragent.isMobile; // Detects Mobile Phones
