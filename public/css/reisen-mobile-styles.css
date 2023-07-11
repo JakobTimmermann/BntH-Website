@@ -4,13 +4,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding-top: 5vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 60% center;
     z-index: -10;
 }
 
-.reise-content:before {
+/* .reise-content:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -26,13 +23,29 @@
     transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
     -webkit-transform: scale(1);
     transform: scale(1);
-}
-.slick-active .reise-content:before {
-    -webkit-transform: scale(1.2);
+} */
+
+.reiseImage {
+    position: absolute; 
+    height: 60vh;
+    width: 100vh;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 55%;
+    background-position-y: 45%;
+    left: -48vw;
+    opacity: 1;
     transform: scale(1.2);
-    -webkit-animation: cssAnimation 8s 1 ease-in-out forwards;
-    animation: cssAnimation 8s 1 ease-in-out forwards;
+    overflow: hidden;
 }
+
+.slick-active .reiseImage {
+    transform: scale(1.2);
+    -webkit-animation: imageAnimation 5s 1 ease-in-out forwards;
+    animation: imageAnimation 5s 1 ease-in-out forwards;
+}
+
 .reise-content div {
     padding: 0vw 10vw;
 }
@@ -44,7 +57,8 @@
 
 .reiseReadMore {
     float: right;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    padding-right: 2vw;
 }
 
 .reiseDescription {
@@ -56,6 +70,9 @@
     -webkit-background-clip: text;
     opacity: 1;
     font-weight: 600;
+    z-index: 1;
+    padding: 4vw;
+    padding-bottom: 7vw;
 }
 
 .reiseJahr {
@@ -68,8 +85,8 @@
 
 .reiseDestination {
     color: var(--primary-color);
-	text-shadow: 4px 4px 6px rgba(15, 98, 146, 0.65);
-	font-size: calc(1rem + 3.5vw);
+	  text-shadow: 4px 4px 6px rgba(15, 98, 146, 0.65);
+	  font-size: calc(1rem + 3.5vw);
     font-weight: 800;
 }
 
@@ -78,31 +95,51 @@
     flex-direction: column;
     justify-content: end;
     position: relative;
-    height: 30vh;
-    padding-bottom: 10vw !important;
+    padding: 0 !important;
+    margin: 10vw 30vw 0vw 0vw;
+    border-radius: 0px;
+    border-top-right-radius: 15px;
+    background-color: rgb(240, 248, 255, 0.9);
     z-index: 1;
     opacity: 1;
-    background: linear-gradient(190deg,
-            rgba(26, 155, 230, 0) 30%,
-            rgb(237, 228, 91, 0.5) 65%,
-            rgb(9, 72, 109, 0.8) 97%
-            );
-    mask: linear-gradient(transparent, black 60%);
 }
 
-@keyframes cssAnimation {
+.slick-active .timeline-carousel__item::after{
+    transform: translateY(10vh);
+    opacity:0.6;
+
+}
+.timeline-carousel__item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 200vh;
+    width: 300%;
+    z-index: 0;
+    opacity: 1;
+    background: linear-gradient(190deg,
+            rgba(26, 155, 230, 0) 20%,
+            rgb(237, 228, 91, 1) 30%,
+            rgb(9, 72, 109, 1) 50%
+            );
+    transform: translateY(-100vh);
+    /* transition: all 0.8s cubic-bezier(0.55, 0.24, 0.18, 1); */
+    transition: all 0.4s cubic-bezier(0.5, 0.7, 0.4, 0.7);
+}
+
+@keyframes imageAnimation {
   from {
-    -webkit-transform: scale(1) translate(0px);
+    -webkit-transform: scale(1.1); 
   }
   to {
-    -webkit-transform: scale(1.2) translate(0px);
+    -webkit-transform: scale(1.2); 
   }
 }
-@-webkit-keyframes cssAnimation {
+@-webkit-keyframes imageAnimation {
   from {
-    -webkit-transform: scale(1) translate(0px);
+    -webkit-transform: scale(1.1); 
   }
   to {
-    -webkit-transform: scale(1.2) translate(0px);
+    -webkit-transform: scale(1.2); 
   }
 }

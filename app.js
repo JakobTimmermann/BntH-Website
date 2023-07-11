@@ -20,7 +20,7 @@ let reisen = [{
         country: "Frankreich",
         andMore: false,
         motto: "Rolling Stones",
-        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor incididunt ut ...",
+        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor ut ...",
         thumbnail: 'images/Reisen/2017_Nizza/thumbnail.jpeg',
     },
     {
@@ -29,7 +29,7 @@ let reisen = [{
         country: "Irland",
         andMore: true,
         motto: "Irish Stew",
-        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor incididunt ut ...",
+        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor ut ...",
         thumbnail: 'images/Reisen/2018_Dublin/thumbnail.jpeg',
     },
     {
@@ -38,8 +38,8 @@ let reisen = [{
         country: "Albanien",
         andMore: true,
         motto: "Blutrache",
-        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor incididunt ut ...",
-        thumbnail: 'images/Reisen/2019_Albanien/thumbnail.jpg',
+        description: "Lorem ipsum dolor sit amet, at adipiscing , sed do eiusmod tempor ut ...",
+        thumbnail: 'images/Reisen/2020_Schweiz/thumbnail.jpg',
     },
 ]
 
