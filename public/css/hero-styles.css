@@ -105,7 +105,7 @@
     content: '';
     width: 0%;
     height: 34%;
-    background-color: var(--secondary-color);
+    background-color: rgb(var(--secondary-color));
     position: absolute;
     bottom: 34%;
     left: 20%;

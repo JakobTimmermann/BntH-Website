@@ -17,8 +17,11 @@ if (window.innerWidth < 900 && shuffle === false) {
 } else if (window.innerWidth >= 900 && shuffle === true) {
     shuffle = false;
 }
+console.log(window.innerWidth);
+console.log(shuffle);
 
 window.addEventListener("resize", function (event) {
+    // TODO Does not work anymore! Why?
     if (window.innerWidth < 900 && shuffle === false) {
         activateSlide($q(".carousel__item")[2])
         resetIndicator();
@@ -26,6 +29,8 @@ window.addEventListener("resize", function (event) {
     } else if (window.innerWidth >= 900 && shuffle === true) {
         shuffle = false;
     }
+    console.log(window.innerWidth);
+    console.log(shuffle);
 })
 
 const getActiveIndex = () => {

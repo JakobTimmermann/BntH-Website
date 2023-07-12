@@ -149,7 +149,7 @@
 }
 
 .mitglieder__name {
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
     font-size: calc(0.5rem + 1.6vw);
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -166,8 +166,8 @@
     font-weight: 600;
     text-transform: uppercase;
     color: transparent;
-    background: linear-gradient(270deg, var(--complimentary-color), var(--secondary-color));
-    background: linear-gradient(270deg, var(--secondary-color), var(--complimentary-color));
+    background: linear-gradient(270deg, rgb(var(--complimentary-color)), rgb(var(--secondary-color)));
+    background: linear-gradient(270deg, rgb(var(--secondary-color)), rgb(var(--complimentary-color)));
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 0.85;
@@ -301,7 +301,7 @@
 }
 
 .mitglieder__bio {
-    color: var(--complimentary-color);
+    color: var(rgb(--complimentary-color));
     font-size: calc(0.5rem + 0.66vw + 0.33  vh);
     font-weight: 500;
     /* background: linear-gradient(270deg, rgb(15, 98, 146), rgb(92, 126, 236)); */
@@ -334,7 +334,7 @@
     border-radius: 100%;
     z-index: 2;
     margin: 10px 0;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid var(rgb(--secondary-color));
     background-size: cover;
     background-position: center center;
     opacity: 0.5;

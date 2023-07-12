@@ -1,8 +1,8 @@
 :root {
-	--primary-color: #FFED00;
-	--secondary-color: #D93BA1;
-	--complimentary-color: #0F6292;
-	--background-blue: rgb(9, 72, 109);
+	--primary-color: 255, 237, 0;
+	--secondary-color: 217, 59, 161;
+	--complimentary-color: 15, 98, 146;
+	--background-blue: 9, 72, 109;
 }
 
 
@@ -86,7 +86,7 @@ ul {
 .vereinsname {
 	position: absolute;
 	float: left;
-	color: var(--primary-color);
+	color: rgb(var(--primary-color));
 	letter-spacing: .2em;
 	font-weight: 900;
 	padding: 25px 0;
@@ -113,8 +113,8 @@ ul {
 	backface-visibility: hidden;
 	transition: 0.3s ease-in-out;
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-	color: rgb(15, 98, 146);
-	border: solid 2px rgb(15, 98, 146);
+	color: rgb(var(--complimentary-color));
+	border: solid 2px rgb(var(--complimentary-color));
 	font-size: calc(0.7rem + 0.3vw);
 	display: flex;
 	justify-content: center;
@@ -133,7 +133,7 @@ TODO: Find alternative "mobile animation" for buttons
 		text-shadow: none;
 		background-color: rgb(15, 98, 146);
 		border: solid 2px rgb(15, 98, 146);
-		color: var(--primary-color);
+		color: var(rgb(--primary-color));
 		font-weight: 900;
 		font-size: calc(0.85rem + 0.22vw);
 	}
@@ -222,18 +222,18 @@ TODO: Find alternative "mobile animation" for buttons
 
 
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a {
-		color: rgb(255, 237, 0);
+		color: rgb(var(--primary-color));
 	}
 
 	#mainNav.nav-is-visible .navbar-nav {
-		background-color: rgb(15, 98, 146, 0.7);
+		background-color: rgba(var(--complimentary-color), 0.7);
 		transition: background-color 0.2s;
 		border-radius: 0px 0px 30px 30px;
 	}
 
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a:focus,
 	#mainNav.is-fixed .navbar-nav>li.nav-item>a:hover {
-		color: var(--primary-color);
+		color: var(rbg(--primary-color));
 	}
 
 	#mainNav.nav-is-visible {

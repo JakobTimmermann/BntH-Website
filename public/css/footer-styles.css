@@ -19,7 +19,7 @@
 
  footer {
      z-index: 10;
-     background: var(--background-blue);
+     background: rgb(var(--background-blue));
      margin-top: auto;
      width: 100%;
  }
@@ -68,7 +68,7 @@
  .footer-social-overlap {
      position: relative;
      z-index: 2;
-     background: var(--background-blue);
+     background: rgb(var(--background-blue));
      padding: 0 20px;
  }
 

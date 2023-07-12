@@ -8,7 +8,7 @@ header {
 }
 
 header .navbar-nav {
-	background-color: rgb(15, 98, 146, 0.7);
+	background-color: rgb(var(--complimentary-color), 0.7);
 	transition: background-color 0.2s;
 	border-radius: 0px 0px 30px 30px;
 	padding: 0px;
@@ -19,13 +19,13 @@ header .navbar-nav {
 }
 
 .navbar-toggler {
-	color: rgb(247, 192, 74);
-	border-color: rgba(255, 255, 0, 0.52);
+	background-color: rgba(var(--primary-color), 0.3);
+	border-color: rgb(var(--secondary-color)); 
 	margin-top: 10px;
 }
 
 .navbar-toggler-item {
-	color: rgb(255, 237, 0);
+	color: rgb(var(--primary-color)); 
 	/* ToDo does not work! */
 }
 
@@ -44,7 +44,7 @@ header .navbar .nav-link {
 	padding: 10px 10px !important;
 	outline: none !important;
 	font-size: 1.2rem;
-	color: #FFED00;
+	color: rgb(var(--primary-color)); 
 }
 
 .nav-item-left {
@@ -60,7 +60,7 @@ header .navbar .nav-link:hover {
 }
 
 header .navbar:hover {
-	color: rgb(15, 98, 146);
+	color: rgb(var(--complimentary-color)); 
 }
 
 
@@ -100,7 +100,7 @@ header .navbar .dropdown-menu:before {
 
 
 header .navbar .dropdown-menu .dropdown-item:hover {
-	background: #FFED00;
+	background: rgb(var(--primary-color));
 	color: black;
 }
 

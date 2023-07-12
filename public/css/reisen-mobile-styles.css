@@ -55,7 +55,7 @@
 
 /* .reiseReadMore {
     float: right;
-    color: var(--primary-color);
+    color: rgb(var(--primary-color));
     padding: 1vw;
     padding-right: 5vw;
 } */
@@ -64,7 +64,7 @@
     font-size: calc(1rem + 0.5vw);
     margin: 0;
     color: transparent;
-    background: linear-gradient(270deg, var(--complimentary-color), var(--secondary-color));
+    background: linear-gradient(270deg, rgb(var(--primary-color)), rgb(var(--secondary-color)));
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 1;
@@ -74,16 +74,16 @@
 }
 
 .reiseJahr {
-    color: var(--secondary-color);
+    color: rgb(var(--secondary-color));
     font-size: calc(1rem + 0.75vw);
     font-weight: 600;
-    text-shadow: 2px 2px 3px rgba(15, 98, 146, 0.65);
+    text-shadow: 2px 2px 3px rgba(var(--complimentary-color), 0.65);
     padding-left: 2vw;
 }
 
 .reiseDestination {
-    color: var(--primary-color);
-	  text-shadow: 4px 4px 6px rgba(15, 98, 146, 0.65);
+    color: rgb(var(--primary-color));
+    text-shadow: 4px 4px 6px rgba(var(--complimentary-color), 0.65);
 	  font-size: calc(1rem + 3.5vw);
     font-weight: 800;
 }
@@ -93,7 +93,7 @@
     padding: 0 !important;
     border-radius: 0px;
     border-top-right-radius: 15px;
-    background-color: rgb(240, 248, 255, 0.9);
+    background-color: rgb(255, 255, 255); 
     z-index: 1;
     opacity: 1;
     width: 33vw;
@@ -119,8 +119,8 @@
     opacity: 1;
     background: linear-gradient(190deg,
             rgba(26, 155, 230, 0) 20%,
-            rgb(237, 228, 91, 1) 30%,
-            rgb(9, 72, 109, 1) 50%
+            rgba(var(--primary-color), 0.9) 30%,
+            rgba(var(--secondary-color), 0.9) 60%
             );
     transform: translateY(-100vh);
     /* transition: all 0.8s cubic-bezier(0.55, 0.24, 0.18, 1); */
